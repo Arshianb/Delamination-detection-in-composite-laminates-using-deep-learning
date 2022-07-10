@@ -1,4 +1,10 @@
-# Delamination-detection-in-composite-laminates-using-machine-learning
+
+<p align="center">
+  <a href="https://github.com/Arshianb/Environment-Nectar">
+    <img src="https://github.com/Arshianb/Delamination-detection-in-composite-laminates-using-machine-learning/raw/Master/introdl.png" alt="Logo" height="250">
+  </a>
+    <h1 align="center">Delamination-detection-in-composite-laminates-using-machine-learning</h1>
+</p>
 
 ## Powered by
 
