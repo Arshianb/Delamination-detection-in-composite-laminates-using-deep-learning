@@ -20,6 +20,7 @@ Using deep learning to find the location with the size of the delamination based
 * [Conditional Generative Adversarial Nets](https://arxiv.org/abs/1411.1784)
 * [Interpreting the Latent Space of GANs for Semantic Face Editing](https://arxiv.org/abs/1907.10786)
 * [InceptionTime: Finding AlexNet for time series classification](https://link.springer.com/article/10.1007/s10618-020-00710-y)
+* [Backbones-Review: Feature Extraction Networks for Deep Learning and Deep Reinforcement Learning Approaches](https://arxiv.org/abs/2206.08016)
 
 ## Powered by
 
