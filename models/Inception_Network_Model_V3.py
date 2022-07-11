@@ -263,4 +263,4 @@ def preprocess_input(x):
 if __name__ == '__main__':
     model = InceptionV3(include_top=True, classes=100, input_shape=[256, 256, 3])
     model.summary()
-    keras.utils.plot_model(model, to_file = "Inception_ImageNet.png", show_shapes=True, expand_nested=True,)
+    keras.utils.plot_model(model, to_file = "Inception_Network_Model_V3.png", show_shapes=True, expand_nested=True,)
