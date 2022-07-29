@@ -218,3 +218,2118 @@ mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 16:22:31 2022',
 mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].orientation.setValues(
     additionalRotationType=ROTATION_NONE, angle=0.0)
 # Save by arshi on 2022_07_29-17.21.36; build 2022 2021_09_15-22.27.30 176069
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 6932, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:05:15 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].orientation.setValues(
+    additionalRotationType=ROTATION_NONE, angle=0.0)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].deletePlies(
+    )
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].suppress(
+    )
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-1', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-2', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-3', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-4', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-5', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-6', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-7', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-8', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].resume(
+    )
+mdb.models['No delamination'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 11784, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:06:24 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].EncastreBC(createStepName='Initial', localCsys=
+    None, name='BC-2', region=Region(
+    edges=mdb.models['No delamination'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), )))
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 7864, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:07:25 2022', 
+    'jobName': 'Job-1'})
+del mdb.models['No delamination'].boundaryConditions['BC-2']
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 8172, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:08:34 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['No delamination'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['No delamination'].parts['Part-1'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['No delamination'].sketches['__edit__'], upToFeature=
+    mdb.models['No delamination'].parts['Part-1'].features['Shell planar-1'])
+del mdb.models['No delamination'].sketches['__edit__']
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].orientation.setValues(
+    additionalRotationType=ROTATION_NONE, angle=0.0)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].deletePlies(
+    )
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].suppress(
+    )
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-1', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-2', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-3', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-4', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-5', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-6', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-7', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-8', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].resume(
+    )
+mdb.models['No delamination'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 11624, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:11:15 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].materials['Material-1'].elastic.setValues(table=(
+    (44700000000000.0, 13200000000000.0, 0.3, 5000000000000.0, 5000000000000.0, 
+    5000000000000.0), ))
+mdb.models['No delamination'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 5508, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:28:01 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].materials['Material-1'].elastic.setValues(table=(
+    (44700000.0, 13200000.0, 0.3, 5000000.0, 5000000.0, 5000000.0), ))
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 2728, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:29:27 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].materials['Material-1'].elastic.setValues(table=(
+    (44700000000.0, 13200000000.0, 0.3, 5000000000.0, 5000000000.0, 
+    5000000000.0), ))
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 10820, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:30:29 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].materials['Material-1'].elastic.setValues(table=(
+    (13200000000.0, 44700000000.0, 0.3, 5000000000.0, 5000000000.0, 
+    5000000000.0), ))
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 13296, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:32:10 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].materials['Material-1'].elastic.setValues(table=(
+    (44700000000.0, 13200000000.0, 0.3, 5000000000.0, 5000000000.0, 
+    5000000000.0), ))
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].orientation.setValues(
+    additionalRotationType=ROTATION_NONE, angle=0.0)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].deletePlies(
+    )
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].suppress(
+    )
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-1', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-2', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-3', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-4', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-5', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-6', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-7', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-8', region=Region(
+    faces=mdb.models['No delamination'].parts['Part-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['No delamination'].parts['Part-1'].compositeLayups['CompositeLayup-1'].resume(
+    )
+mdb.models['No delamination'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 10952, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 28.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:33:40 2022', 
+    'jobName': 'Job-1'})
+mdb.models['No delamination'].parts['Part-1'].deleteMesh()
+mdb.models['No delamination'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.002)
+mdb.models['No delamination'].parts['Part-1'].generateMesh()
+mdb.models['No delamination'].rootAssembly.regenerate()
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 7784, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 77.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 18:34:23 2022', 
+    'jobName': 'Job-1'})
+mdb.Model(modelType=STANDARD_EXPLICIT, name=
+    'x_a on L eq to zero point fifteen')
+mdb.models['x_a on L eq to zero point fifteen'].ConstrainedSketch(name=
+    '__profile__', sheetSize=1.0)
+mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'].rectangle(
+    point1=(0.0, 0.0), point2=(0.02, 0.2))
+mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'].undo()
+mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'].rectangle(
+    point1=(0.0, 0.0), point2=(0.02, 0.01))
+mdb.models['x_a on L eq to zero point fifteen'].Part(dimensionality=THREE_D, 
+    name='Beam1', type=DEFORMABLE_BODY)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].BaseShell(
+    sketch=
+    mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'])
+del mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__']
+mdb.models['x_a on L eq to zero point fifteen'].ConstrainedSketch(name=
+    '__profile__', sheetSize=1.0)
+mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'].rectangle(
+    point1=(0.0, 0.0), point2=(0.02, 0.04))
+mdb.models['x_a on L eq to zero point fifteen'].Part(dimensionality=THREE_D, 
+    name='Beam2', type=DEFORMABLE_BODY)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].BaseShell(
+    sketch=
+    mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'])
+del mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__']
+mdb.models['x_a on L eq to zero point fifteen'].ConstrainedSketch(name=
+    '__profile__', sheetSize=1.0)
+mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'].rectangle(
+    point1=(0.0, 0.0), point2=(0.02, 0.04))
+mdb.models['x_a on L eq to zero point fifteen'].Part(dimensionality=THREE_D, 
+    name='Beam3', type=DEFORMABLE_BODY)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].BaseShell(
+    sketch=
+    mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'])
+del mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__']
+mdb.models['x_a on L eq to zero point fifteen'].ConstrainedSketch(name=
+    '__profile__', sheetSize=1.0)
+mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'].rectangle(
+    point1=(0.0, 0.0), point2=(0.02, 0.15))
+mdb.models['x_a on L eq to zero point fifteen'].Part(dimensionality=THREE_D, 
+    name='Beam4', type=DEFORMABLE_BODY)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].BaseShell(
+    sketch=
+    mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__'])
+del mdb.models['x_a on L eq to zero point fifteen'].sketches['__profile__']
+mdb.models['x_a on L eq to zero point fifteen'].Material(name='Material-1')
+mdb.models['x_a on L eq to zero point fifteen'].materials['Material-1'].Density(
+    table=((1942.5, ), ))
+mdb.models['x_a on L eq to zero point fifteen'].materials['Material-1'].Elastic(
+    table=((44700000000.0, 13200000000.0, 0.3, 5000000000.0, 5000000000.0, 
+    5000000000.0), ), type=LAMINA)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].CompositeLayup(
+    description='', elementType=SHELL, name='CompositeLayup-1', offsetType=
+    MIDDLE_SURFACE, symmetric=False, thicknessAssignment=FROM_SECTION)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].Section(
+    integrationRule=SIMPSON, poissonDefinition=DEFAULT, preIntegrate=OFF, 
+    temperature=GRADIENT, thicknessType=UNIFORM, useDensity=OFF)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].ReferenceOrientation(
+    additionalRotationType=ROTATION_NONE, angle=0.0, axis=AXIS_3, fieldName='', 
+    localCsys=None, orientationType=GLOBAL)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].suppress(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-1', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-2', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-3', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-4', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-5', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-6', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-7', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-8', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].compositeLayups['CompositeLayup-1'].resume(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.DatumCsysByDefault(
+    CARTESIAN)
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.Instance(
+    dependent=ON, name='Beam1-1', part=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'])
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].CompositeLayup(
+    description='', elementType=SHELL, name='CompositeLayup-1', offsetType=
+    MIDDLE_SURFACE, symmetric=False, thicknessAssignment=FROM_SECTION)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].Section(
+    integrationRule=SIMPSON, poissonDefinition=DEFAULT, preIntegrate=OFF, 
+    temperature=GRADIENT, thicknessType=UNIFORM, useDensity=OFF)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].ReferenceOrientation(
+    additionalRotationType=ROTATION_NONE, angle=0.0, axis=AXIS_3, fieldName='', 
+    localCsys=None, orientationType=GLOBAL)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].suppress(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-1', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00014999, 
+    thicknessType=SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-2', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-3', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-4', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].resume(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].orientation.setValues(
+    additionalRotationType=ROTATION_NONE, angle=0.0)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].deletePlies(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].suppress(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-1', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-2', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-3', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-4', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00014999, 
+    thicknessType=SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].compositeLayups['CompositeLayup-1'].resume(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].CompositeLayup(
+    description='', elementType=SHELL, name='CompositeLayup-1', offsetType=
+    MIDDLE_SURFACE, symmetric=False, thicknessAssignment=FROM_SECTION)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].Section(
+    integrationRule=SIMPSON, poissonDefinition=DEFAULT, preIntegrate=OFF, 
+    temperature=GRADIENT, thicknessType=UNIFORM, useDensity=OFF)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].ReferenceOrientation(
+    additionalRotationType=ROTATION_NONE, angle=0.0, axis=AXIS_3, fieldName='', 
+    localCsys=None, orientationType=GLOBAL)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].suppress(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-1', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00014999, 
+    thicknessType=SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-2', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-3', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-4', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].resume(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].compositeLayups['CompositeLayup-1'].orientation.setValues(
+    additionalRotationType=ROTATION_NONE, angle=0.0)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].CompositeLayup(
+    description='', elementType=SHELL, name='CompositeLayup-1', offsetType=
+    MIDDLE_SURFACE, symmetric=False, thicknessAssignment=FROM_SECTION)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].Section(
+    integrationRule=SIMPSON, poissonDefinition=DEFAULT, preIntegrate=OFF, 
+    temperature=GRADIENT, thicknessType=UNIFORM, useDensity=OFF)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].ReferenceOrientation(
+    additionalRotationType=ROTATION_NONE, angle=0.0, axis=AXIS_3, fieldName='', 
+    localCsys=None, orientationType=GLOBAL)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].suppress(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-1', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-2', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-3', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-4', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-5', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-6', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-7', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='Material-1', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-8', region=Region(
+    faces=mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), )), suppressed=False, thickness=0.00015, thicknessType=
+    SPECIFY_THICKNESS)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].compositeLayups['CompositeLayup-1'].resume(
+    )
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.regenerate()
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.Instance(
+    dependent=ON, name='Beam1-2', part=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'])
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.Instance(
+    dependent=ON, name='Beam2-1', part=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'])
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.translate(
+    instanceList=('Beam2-1', ), vector=(0.0, 0.01, 0.00045))
+del mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.features['Beam1-2']
+del mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.features['Beam2-1']
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.Instance(
+    dependent=ON, name='Beam2-1', part=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'])
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.translate(
+    instanceList=('Beam2-1', ), vector=(0.0, 0.01, 0.0003))
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.Instance(
+    dependent=ON, name='Beam3-1', part=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'])
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.translate(
+    instanceList=('Beam3-1', ), vector=(0.0, 0.01, -0.0003))
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.Instance(
+    dependent=ON, name='Beam4-1', part=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'])
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.translate(
+    instanceList=('Beam4-1', ), vector=(0.0, 0.05, 0.0))
+mdb.models['x_a on L eq to zero point fifteen'].EncastreBC(createStepName=
+    'Initial', localCsys=None, name='BC-1', region=Region(
+    edges=mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam1-1'].edges.getSequenceFromMask(
+    mask=('[#1 ]', ), )))
+mdb.models['x_a on L eq to zero point fifteen'].FrequencyStep(name='Step-1', 
+    numEigen=10, previous='Initial')
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].setMeshControls(
+    regions=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=SWEEP)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=0.001)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].generateMesh()
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].deleteMesh()
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=0.002)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].generateMesh()
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].setMeshControls(
+    regions=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=SWEEP)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=0.002)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].generateMesh()
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].setMeshControls(
+    regions=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=SWEEP)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=0.002)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].generateMesh()
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].setMeshControls(
+    regions=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=SWEEP)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=0.002)
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].generateMesh()
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.regenerate()
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].Surface(name=
+    'left', side1Edges=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam4'].edges.getSequenceFromMask(
+    ('[#1 ]', ), ))
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].Surface(name=
+    'right', side1Edges=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ))
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].Surface(name=
+    'left', side1Edges=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].edges.getSequenceFromMask(
+    ('[#1 ]', ), ))
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].Surface(name=
+    'top', side1Faces=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam3'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ))
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].Surface(name=
+    'right', side1Edges=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ))
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].Surface(name=
+    'left', side1Edges=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].edges.getSequenceFromMask(
+    ('[#1 ]', ), ))
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].Surface(name=
+    'bottom', side2Faces=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam2'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ))
+mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].Surface(name=
+    'right', side1Edges=
+    mdb.models['x_a on L eq to zero point fifteen'].parts['Beam1'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ))
+mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.regenerate()
+mdb.models['x_a on L eq to zero point fifteen'].Tie(adjust=ON, main=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam1-1'].surfaces['right']
+    , name='Beam1 to Beam2', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam2-1'].surfaces['left']
+    , thickness=ON, tieRotations=ON)
+mdb.models['x_a on L eq to zero point fifteen'].Tie(adjust=ON, main=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam1-1'].surfaces['right']
+    , name='Beam1 to Beam3', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam3-1'].surfaces['left']
+    , thickness=ON, tieRotations=ON)
+mdb.models['x_a on L eq to zero point fifteen'].Tie(adjust=ON, main=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam4-1'].surfaces['left']
+    , name='Beam4 to Beam2', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam2-1'].surfaces['right']
+    , thickness=ON, tieRotations=ON)
+mdb.models['x_a on L eq to zero point fifteen'].Tie(adjust=ON, main=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam4-1'].surfaces['left']
+    , name='Beam4 to Beam3', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam3-1'].surfaces['right']
+    , thickness=ON, tieRotations=ON)
+mdb.models['x_a on L eq to zero point fifteen'].ContactProperty('IntProp-1')
+mdb.models['x_a on L eq to zero point fifteen'].interactionProperties['IntProp-1'].TangentialBehavior(
+    formulation=FRICTIONLESS)
+mdb.models['x_a on L eq to zero point fifteen'].SurfaceToSurfaceContactStd(
+    adjustMethod=NONE, clearanceRegion=None, createStepName='Initial', 
+    datumAxis=None, initialClearance=OMIT, interactionProperty='IntProp-1', 
+    main=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam2-1'].surfaces['bottom']
+    , name='Int-1', secondary=
+    mdb.models['x_a on L eq to zero point fifteen'].rootAssembly.instances['Beam3-1'].surfaces['top']
+    , sliding=FINITE, thickness=ON)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=
+    'x_a on L eq to zero point fifteen', modelPrint=OFF, multiprocessingMode=
+    DEFAULT, name='Job-2', nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-2'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-2']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '*TIE BETWEEN SURFACE PAIR (ASSEMBLY_BEAM2-1_LEFT,ASSEMBLY_BEAM1-1_RIGHT) IS REVERTED BACK TO TYPE NODE-TO-SURFACE. THIS CASE MAY HAPPEN IF TYPE SURFACE-TO-SURFACE CANNOT FIND NODES TO TIE TOGETHER OR IF DEFAULT ACOUSTIC-STRUCTURAL TIE IS SPECIFIED INVOLVING SHELLS. PLEASE CHECK THE SURFACE DEFINITIONS OR SPECIFY TYPE=SURFACE TO SURFACE FOR ACOUSTIC-STRUCTURAL TIE.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_BEAM2-1_LEFT-ASSEMBLY_BEAM1-1_RIGHT), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '*TIE BETWEEN SURFACE PAIR (ASSEMBLY_BEAM3-1_LEFT,ASSEMBLY_BEAM1-1_RIGHT) IS REVERTED BACK TO TYPE NODE-TO-SURFACE. THIS CASE MAY HAPPEN IF TYPE SURFACE-TO-SURFACE CANNOT FIND NODES TO TIE TOGETHER OR IF DEFAULT ACOUSTIC-STRUCTURAL TIE IS SPECIFIED INVOLVING SHELLS. PLEASE CHECK THE SURFACE DEFINITIONS OR SPECIFY TYPE=SURFACE TO SURFACE FOR ACOUSTIC-STRUCTURAL TIE.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_BEAM3-1_LEFT-ASSEMBLY_BEAM1-1_RIGHT), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '*TIE BETWEEN SURFACE PAIR (ASSEMBLY_BEAM2-1_RIGHT,ASSEMBLY_BEAM4-1_LEFT) IS REVERTED BACK TO TYPE NODE-TO-SURFACE. THIS CASE MAY HAPPEN IF TYPE SURFACE-TO-SURFACE CANNOT FIND NODES TO TIE TOGETHER OR IF DEFAULT ACOUSTIC-STRUCTURAL TIE IS SPECIFIED INVOLVING SHELLS. PLEASE CHECK THE SURFACE DEFINITIONS OR SPECIFY TYPE=SURFACE TO SURFACE FOR ACOUSTIC-STRUCTURAL TIE.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_BEAM2-1_RIGHT-ASSEMBLY_BEAM4-1_LEFT), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '*TIE BETWEEN SURFACE PAIR (ASSEMBLY_BEAM3-1_RIGHT,ASSEMBLY_BEAM4-1_LEFT) IS REVERTED BACK TO TYPE NODE-TO-SURFACE. THIS CASE MAY HAPPEN IF TYPE SURFACE-TO-SURFACE CANNOT FIND NODES TO TIE TOGETHER OR IF DEFAULT ACOUSTIC-STRUCTURAL TIE IS SPECIFIED INVOLVING SHELLS. PLEASE CHECK THE SURFACE DEFINITIONS OR SPECIFY TYPE=SURFACE TO SURFACE FOR ACOUSTIC-STRUCTURAL TIE.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_BEAM3-1_RIGHT-ASSEMBLY_BEAM4-1_LEFT), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '44 nodes are either missing intersection with their respective main surface or are outside the adjust zone. The nodes have been identified in node set WarnNodeMissMainIntersect.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-2.odb', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 10892, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-2', 'memory': 88.0})
+mdb.jobs['Job-2']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-2', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-2']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 19:29:16 2022', 
+    'jobName': 'Job-2'})
+mdb.models['x_a on L eq to zero point fifteen'].constraints['Beam1 to Beam2'].setValues(
+    positionTolerance=0.002, positionToleranceMethod=SPECIFIED)
+mdb.models['x_a on L eq to zero point fifteen'].constraints['Beam1 to Beam3'].setValues(
+    positionTolerance=0.002, positionToleranceMethod=SPECIFIED)
+mdb.models['x_a on L eq to zero point fifteen'].constraints['Beam4 to Beam2'].setValues(
+    positionTolerance=0.002, positionToleranceMethod=SPECIFIED)
+mdb.models['x_a on L eq to zero point fifteen'].constraints['Beam4 to Beam3'].setValues(
+    positionTolerance=0.002, positionToleranceMethod=SPECIFIED)
+mdb.jobs['Job-2'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-2']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-2.odb', 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 4308, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-2', 'memory': 87.0})
+mdb.jobs['Job-2']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-2', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-2']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-2'})
+mdb.jobs['Job-2']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 19:30:24 2022', 
+    'jobName': 'Job-2'})
+mdb.Model(modelType=STANDARD_EXPLICIT, name='x_a on L eq to zero point fifty')
+del mdb.models['x_a on L eq to zero point fifty']
+mdb.Model(name='x_a on L eq to zero point fifty', objectToCopy=
+    mdb.models['x_a on L eq to zero point fifteen'])
+mdb.models['x_a on L eq to zero point fifty'].ConstrainedSketch(name='__edit__'
+    , objectToCopy=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].features['Shell planar-1'].sketch)
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].features['Shell planar-1'])
+del mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__']
+mdb.models['x_a on L eq to zero point fifty'].ConstrainedSketch(name='__edit__'
+    , objectToCopy=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].features['Shell planar-1'].sketch)
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].features['Shell planar-1'])
+mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].FixedConstraint(
+    entity=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].vertices[0])
+mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].ObliqueDimension(
+    textPoint=(-0.00192986149340868, 0.00612043589353561), value=0.08, vertex1=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].vertices[0]
+    , vertex2=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].vertices[1])
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'])
+del mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__']
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].regenerate()
+mdb.models['x_a on L eq to zero point fifty'].ConstrainedSketch(name='__edit__'
+    , objectToCopy=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam4'].features['Shell planar-1'].sketch)
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam4'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam4'].features['Shell planar-1'])
+mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].FixedConstraint(
+    entity=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].vertices[0])
+mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].ObliqueDimension(
+    textPoint=(-0.0511958822607994, 0.067620150744915), value=0.08, vertex1=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].vertices[0]
+    , vertex2=
+    mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'].vertices[1])
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam4'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__'])
+del mdb.models['x_a on L eq to zero point fifty'].sketches['__edit__']
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam4'].regenerate()
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.regenerate()
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.deleteFeatures((
+    'Beam1-1', 'Beam2-1', 'Beam3-1', 'Beam4-1'))
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.Instance(dependent=
+    ON, name='Beam1-1', part=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'])
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.Instance(dependent=
+    ON, name='Beam2-1', part=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam2'])
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.translate(
+    instanceList=('Beam2-1', ), vector=(0.0, 0.08, 0.0003))
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.Instance(dependent=
+    ON, name='Beam3-1', part=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam3'])
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.translate(
+    instanceList=('Beam3-1', ), vector=(0.0, 0.08, -0.0003))
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.Instance(dependent=
+    ON, name='Beam4-1', part=
+    mdb.models['x_a on L eq to zero point fifty'].parts['Beam4'])
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.translate(
+    instanceList=('Beam4-1', ), vector=(0.0, 0.12, 0.0))
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam4'].generateMesh()
+mdb.models['x_a on L eq to zero point fifty'].parts['Beam1'].generateMesh()
+mdb.models['x_a on L eq to zero point fifty'].rootAssembly.regenerate()
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='x_a on L eq to zero point fifty', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-3', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-3'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-3']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *BOUNDARY, file "Job-3.inp", line 2732: Unknown assembly node set _PICKEDSET14', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '44 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY__PICKEDSET14 HAS NOT BEEN DEFINED', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'A BOUNDARY CONDITION HAS BEEN SPECIFIED ON NODE SET ASSEMBLY__PICKEDSET14 BUT THIS NODE SET IS NOT ACTIVE IN THE MODEL', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY__PICKEDSET14 HAS NOT BEEN DEFINED', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY__PICKEDSET14 HAS NOT BEEN DEFINED', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY__PICKEDSET14 HAS NOT BEEN DEFINED', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-3.odb', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ABORTED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase failed due to errors', 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ERROR, {
+    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-3.dat file for possible error messages if the file exists.', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(JOB_ABORTED, {
+    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-3.dat file for possible error messages if the file exists.', 
+    'jobName': 'Job-3'})
+mdb.models['x_a on L eq to zero point fifty'].boundaryConditions['BC-1'].setValues(
+    region=Region(
+    edges=mdb.models['x_a on L eq to zero point fifty'].rootAssembly.instances['Beam1-1'].edges.getSequenceFromMask(
+    mask=('[#1 ]', ), )))
+mdb.jobs['Job-3'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-3']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-3.odb', 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 10868, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-3', 'memory': 88.0})
+mdb.jobs['Job-3']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-3', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-3']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-3'})
+mdb.jobs['Job-3']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 21:48:47 2022', 
+    'jobName': 'Job-3'})
+mdb.Model(name='x_a on L eq to zero point eighty five', objectToCopy=
+    mdb.models['x_a on L eq to zero point fifty'])
+del mdb.models['x_a on L eq to zero point eighty five']
+mdb.Model(name='x_a on L eq to zero point eighty five', objectToCopy=
+    mdb.models['x_a on L eq to zero point fifteen'])
+mdb.models['x_a on L eq to zero point eighty five'].boundaryConditions['BC-1'].setValues(
+    region=Region(
+    edges=mdb.models['x_a on L eq to zero point eighty five'].rootAssembly.instances['Beam4-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), )))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=
+    'x_a on L eq to zero point eighty five', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-4', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=
+    ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, 
+    waitMinutes=0)
+mdb.jobs['Job-4'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-4']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-4.odb', 
+    'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 4840, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-4', 'memory': 87.0})
+mdb.jobs['Job-4']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-4', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-4']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-4'})
+mdb.jobs['Job-4']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 22:14:25 2022', 
+    'jobName': 'Job-4'})
+mdb.models.changeKey(fromName='x_a on L eq to zero point eighty five', toName=
+    'x_a on L eq to zero point eighty five CF')
+mdb.models.changeKey(fromName='No delamination', toName='No delamination CF')
+mdb.models.changeKey(fromName='x_a on L eq to zero point fifteen', toName=
+    'x_a on L eq to zero point fifteen CF')
+mdb.models.changeKey(fromName='x_a on L eq to zero point fifty', toName=
+    'x_a on L eq to zero point fifty CF')
+mdb.Model(name='No delamination CC', objectToCopy=
+    mdb.models['No delamination CF'])
+mdb.models['No delamination CC'].EncastreBC(createStepName='Initial', 
+    localCsys=None, name='BC-2', region=Region(
+    edges=mdb.models['No delamination CC'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), )))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='No delamination CC', modelPrint=
+    OFF, multiprocessingMode=DEFAULT, name='Job-5', nodalOutputPrecision=SINGLE
+    , numCpus=1, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['Job-5'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-5']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-5.odb', 
+    'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 6816, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-5', 'memory': 77.0})
+mdb.jobs['Job-5']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-5', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-5']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-5'})
+mdb.jobs['Job-5']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 22:21:57 2022', 
+    'jobName': 'Job-5'})
+mdb.Model(name='x_a on L eq to zero point fifteen CC', objectToCopy=
+    mdb.models['x_a on L eq to zero point fifteen CF'])
+mdb.models['x_a on L eq to zero point fifteen CC'].EncastreBC(createStepName=
+    'Initial', localCsys=None, name='BC-2', region=Region(
+    edges=mdb.models['x_a on L eq to zero point fifteen CC'].rootAssembly.instances['Beam4-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), )))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=
+    'x_a on L eq to zero point fifteen CC', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-6', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=
+    ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, 
+    waitMinutes=0)
+mdb.jobs['Job-6'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-6']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-6.odb', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 11960, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-6', 'memory': 87.0})
+mdb.jobs['Job-6']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-6', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-6']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 22:47:53 2022', 
+    'jobName': 'Job-6'})
+mdb.Model(name='x_a on L eq to zero point fifty CC', objectToCopy=
+    mdb.models['x_a on L eq to zero point fifty CF'])
+mdb.models['x_a on L eq to zero point fifty CC'].EncastreBC(createStepName=
+    'Initial', localCsys=None, name='BC-2', region=Region(
+    edges=mdb.models['x_a on L eq to zero point fifty CC'].rootAssembly.instances['Beam4-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), )))
+mdb.jobs['Job-6'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-6']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'Process terminated by external request (SIGTERM or SIGINT received).', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(INTERRUPTED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis interrupted by external signal', 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ERROR, {
+    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-6.dat file for possible error messages if the file exists.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(JOB_ABORTED, {
+    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-6.dat file for possible error messages if the file exists.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-6']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-6.odb', 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 12400, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-6', 'memory': 87.0})
+mdb.jobs['Job-6']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-6', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-6']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-6'})
+mdb.jobs['Job-6']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 22:55:21 2022', 
+    'jobName': 'Job-6'})
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=
+    'x_a on L eq to zero point fifty CC', modelPrint=OFF, multiprocessingMode=
+    DEFAULT, name='Job-7', nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-7'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-7']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-7.odb', 
+    'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 9792, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-7', 'memory': 88.0})
+mdb.jobs['Job-7']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-7', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-7']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-7'})
+mdb.jobs['Job-7']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 22:55:51 2022', 
+    'jobName': 'Job-7'})
+mdb.Model(name='x_a on L eq to zero point thrity CC', objectToCopy=
+    mdb.models['x_a on L eq to zero point fifty CC'])
+mdb.models['x_a on L eq to zero point thrity CC'].ConstrainedSketch(name=
+    '__edit__', objectToCopy=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam1'].features['Shell planar-1'].sketch)
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam1'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam1'].features['Shell planar-1'])
+mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].delete(
+    objectList=(
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].dimensions[0], 
+    ))
+mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].ObliqueDimension(
+    textPoint=(-0.0210051368921995, 0.0378746949136257), value=0.04, vertex1=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].vertices[0]
+    , vertex2=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].vertices[1])
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam1'].features['Shell planar-1'].setValues(
+    sketch=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'])
+del mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__']
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam1'].regenerate()
+mdb.models['x_a on L eq to zero point thrity CC'].ConstrainedSketch(name=
+    '__edit__', objectToCopy=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam2'].features['Shell planar-1'].sketch)
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam2'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam2'].features['Shell planar-1'])
+del mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__']
+mdb.models['x_a on L eq to zero point thrity CC'].ConstrainedSketch(name=
+    '__edit__', objectToCopy=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam4'].features['Shell planar-1'].sketch)
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam4'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam4'].features['Shell planar-1'])
+mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].delete(
+    objectList=(
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].dimensions[0], 
+    ))
+mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].ObliqueDimension(
+    textPoint=(-0.0478768385946751, 0.0308346375823021), value=0.12, vertex1=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].vertices[0]
+    , vertex2=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'].vertices[1])
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam4'].features['Shell planar-1'].setValues(
+    sketch=
+    mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__'])
+del mdb.models['x_a on L eq to zero point thrity CC'].sketches['__edit__']
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam4'].regenerate()
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.regenerate()
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.deleteFeatures((
+    'Beam1-1', 'Beam2-1', 'Beam3-1', 'Beam4-1'))
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.Instance(
+    dependent=ON, name='Beam1-1', part=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam1'])
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.Instance(
+    dependent=ON, name='Beam2-1', part=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam2'])
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.translate(
+    instanceList=('Beam2-1', ), vector=(0.0, 0.04, 0.0003))
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.Instance(
+    dependent=ON, name='Beam3-1', part=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam3'])
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.translate(
+    instanceList=('Beam3-1', ), vector=(0.0, 0.04, -0.0003))
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.Instance(
+    dependent=ON, name='Beam4-1', part=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam4'])
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.translate(
+    instanceList=('Beam4-1', ), vector=(0.0, 0.08, 0.0003))
+del mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.features['Beam4-1']
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.Instance(
+    dependent=ON, name='Beam4-1', part=
+    mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam4'])
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.translate(
+    instanceList=('Beam4-1', ), vector=(0.0, 0.08, 0.0))
+mdb.models['x_a on L eq to zero point thrity CC'].boundaryConditions['BC-1'].setValues(
+    region=Region(
+    edges=mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.instances['Beam4-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), )))
+del mdb.models['x_a on L eq to zero point thrity CC'].boundaryConditions['BC-2']
+mdb.models['x_a on L eq to zero point thrity CC'].EncastreBC(createStepName=
+    'Initial', localCsys=None, name='BC-2', region=Region(
+    edges=mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.instances['Beam1-1'].edges.getSequenceFromMask(
+    mask=('[#1 ]', ), )))
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam4'].generateMesh()
+mdb.models['x_a on L eq to zero point thrity CC'].parts['Beam1'].generateMesh()
+mdb.models['x_a on L eq to zero point thrity CC'].rootAssembly.regenerate()
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=
+    'x_a on L eq to zero point thrity CC', modelPrint=OFF, multiprocessingMode=
+    DEFAULT, name='Job-8', nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-8'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-8']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'PC1044', 'handle': 0, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '11 nodes have been adjusted. The nodes have been identified in node set WarnNodeAdjust.', 
+    'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\modal analysis\\3d shell planner\\Job-8.odb', 
+    'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'PC1044', 'handle': 10944, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-8', 'memory': 87.0})
+mdb.jobs['Job-8']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16340.0, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(MINIMUM_MEMORY, {'minimum_memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-8', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-8']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-8'})
+mdb.jobs['Job-8']._Message(JOB_COMPLETED, {'time': 'Fri Jul 29 23:54:15 2022', 
+    'jobName': 'Job-8'})
+# Save by 795593 on 2022_07_29-23.55.35; build 2022 2021_09_15-22.27.30 176069
+# Save by 795593 on 2022_07_29-23.55.35; build 2022 2021_09_15-22.27.30 176069
+# Save by 795593 on 2022_07_29-23.55.35; build 2022 2021_09_15-22.27.30 176069
+# Save by 795593 on 2022_07_29-23.55.36; build 2022 2021_09_15-22.27.30 176069

@@ -1,0 +1,24 @@
+<?xml version="1.0"?><msgwrapper><Started><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-1</jobName><clientHost type="string">PC1044</clientHost><handle type="integer">0</handle></Started>
+<Odb_File><file type="string">D:\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\modal analysis\3d solid extrusion\Job-1.odb</file><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-1</jobName></Odb_File>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Job-1</jobName></Completed>
+<Started><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName><clientHost type="string">PC1044</clientHost><handle type="integer">13716</handle></Started>
+<Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Step>
+<Warning><message type="string">The 3-direction at one or more points in one or more layers in 28000 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Warning>
+<Odb_Frame><step type="integer">0</step><frame type="integer">0</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<MEMORY_ESTIMATE><memory type="float">1424</memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></MEMORY_ESTIMATE>
+<PHYSICAL_MEMORY><physical_memory type="float">16340</physical_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></PHYSICAL_MEMORY>
+<MINIMUM_MEMORY><minimum_memory type="float">99</minimum_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></MINIMUM_MEMORY>
+<Odb_Frame><step type="integer">0</step><frame type="integer">1</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">2</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">3</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">4</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">5</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">6</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">7</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">8</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">9</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Odb_Frame><step type="integer">0</step><frame type="integer">10</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Odb_Frame>
+<Status><step type="integer">1</step><increment type="integer">1</increment><attempts type="integer">1</attempts><severe type="integer">0</severe><equilibrium type="integer">0</equilibrium><iterations type="integer">0</iterations><totalTime type="float">0</totalTime><stepTime type="float">1e-36</stepTime><timeIncrement type="float">1e-36</timeIncrement><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Status>
+<End_Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></End_Step>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Job-1</jobName></Completed>
+<JOB_COMPLETED><jobName type="string">Job-1</jobName><time type="string">Fri Jul 29 18:36:52 2022</time></JOB_COMPLETED></msgwrapper>
