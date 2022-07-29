@@ -7,6 +7,7 @@ bin-release/
 # Other files and folders
 .settings/
 Proj_env/*
+Abacus models/modal analysis/3d shell planner/job*
 # Executables
 *.swf
 *.air
