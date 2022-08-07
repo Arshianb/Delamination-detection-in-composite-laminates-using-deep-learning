@@ -28,3 +28,23 @@ mdb.models['Delamination-Case-2'].parts['Beam1'].features['Partition face-1'].se
     sketch=mdb.models['Delamination-Case-2'].sketches['__edit__'])
 del mdb.models['Delamination-Case-2'].sketches['__edit__']
 mdb.models['Delamination-Case-2'].parts['Beam1'].regenerate()
+
+
+
+
+# another example
+mdb.models['Delamination-Case-3'].ConstrainedSketch(name='__edit__', 
+    objectToCopy=
+    mdb.models['Delamination-Case-3'].parts['Beam1'].features['Partition face-2'].sketch)
+mdb.models['Delamination-Case-3'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Delamination-Case-3'].sketches['__edit__'].geometry[5], ))
+mdb.models['Delamination-Case-3'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Delamination-Case-3'].sketches['__edit__'].geometry[4], ))
+mdb.models['Delamination-Case-3'].sketches['__edit__'].Line(point1=(0.1024, 
+    0.4608), point2=(0.1536, 0.512))
+mdb.models['Delamination-Case-3'].sketches['__edit__'].Line(point1=(0.1024, 
+    0.512), point2=(0.1536, 0.4608))
+mdb.models['Delamination-Case-3'].parts['Beam1'].features['Partition face-2'].setValues(
+    sketch=mdb.models['Delamination-Case-3'].sketches['__edit__'])
+del mdb.models['Delamination-Case-3'].sketches['__edit__']
+mdb.models['Delamination-Case-3'].parts['Beam1'].regenerate()

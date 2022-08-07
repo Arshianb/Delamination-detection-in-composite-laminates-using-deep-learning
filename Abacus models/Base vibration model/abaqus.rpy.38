@@ -1,0 +1,125 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by arshi on Sun Aug  7 09:02:26 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=202.471450805664, 
+    height=101.29426574707)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='D:/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/model num 1.cae')
+#: The model database "D:\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\model num 1.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+p = mdb.models['Delamination-Case-4'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-4'].rootAssembly
+a.regenerate()
+a = mdb.models['Delamination-Case-4'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Delamination-Case-2'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+o3 = session.openOdb(
+    name='D:/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-3.odb')
+#: Model: D:/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-3.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.15653, 
+    farPlane=1.81671, width=0.262064, height=0.0964014, viewOffsetX=-0.131542, 
+    viewOffsetY=0.208181)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.15447, 
+    farPlane=1.81877, width=0.261597, height=0.0962297, cameraPosition=(
+    1.07401, 1.08069, 0.932207), cameraUpVector=(-0.332247, 0.53303, 
+    -0.778133), cameraTarget=(0.215706, 0.222386, 0.073907), 
+    viewOffsetX=-0.131308, viewOffsetY=0.20781)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.39656, 
+    farPlane=2.18165, width=0.316453, height=0.116409, cameraPosition=(
+    -0.82045, 1.6998, 0.257983), cameraUpVector=(0.631419, -0.00178755, 
+    -0.77544), cameraTarget=(0.0291365, 0.481126, 0.313545), 
+    viewOffsetX=-0.158843, viewOffsetY=0.251387)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.48895, 
+    farPlane=2.16912, width=0.337389, height=0.12411, cameraPosition=(-1.01275, 
+    1.37541, -0.77312), cameraUpVector=(0.846586, -0.188849, -0.497623), 
+    cameraTarget=(-0.106648, 0.563142, 0.0808427), viewOffsetX=-0.169352, 
+    viewOffsetY=0.268018)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.41123, 
+    farPlane=2.24685, width=0.926818, height=0.340935, viewOffsetX=-0.084688, 
+    viewOffsetY=0.193613)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.43275, 
+    farPlane=2.20694, width=0.94095, height=0.346133, cameraPosition=(-1.09497, 
+    1.0611, -0.976361), cameraUpVector=(0.886769, -0.155005, -0.435448), 
+    cameraTarget=(-0.139405, 0.518328, 0.0248143), viewOffsetX=-0.0859793, 
+    viewOffsetY=0.196565)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.51889, 
+    farPlane=2.1208, width=0.289388, height=0.106453, viewOffsetX=0.0103483, 
+    viewOffsetY=0.141909)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.54252, 
+    farPlane=2.33206, width=0.293889, height=0.108109, cameraPosition=(-1.0632, 
+    1.70793, -0.0705457), cameraUpVector=(0.560307, -0.171898, -0.810252), 
+    cameraTarget=(-0.0887504, 0.623909, 0.221701), viewOffsetX=0.0105093, 
+    viewOffsetY=0.144117)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.49364, 
+    farPlane=2.38094, width=0.679491, height=0.249954, viewOffsetX=-0.0126975, 
+    viewOffsetY=0.190239)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.74742, 
+    farPlane=2.30507, width=0.794941, height=0.292423, cameraPosition=(
+    0.455159, 1.42457, 1.66551), cameraUpVector=(-0.243776, 0.462108, 
+    -0.85266), cameraTarget=(0.382678, 0.427863, 0.564891), 
+    viewOffsetX=-0.0148549, viewOffsetY=0.222562)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.58125, 
+    farPlane=2.47123, width=1.97701, height=0.727254, viewOffsetX=0.124264, 
+    viewOffsetY=0.277227)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+a = mdb.models['Delamination-Case-2'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, interactions=OFF, constraints=OFF, 
+    engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF, adaptiveMeshConstraints=ON)
+a = mdb.models['Delamination-Case-4'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
