@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://github.com/Arshianb/Environment-Nectar">
-    <img src="https://github.com/Arshianb/Delamination-detection-in-composite-laminates-using-deep-learning/raw/Master/Full%20wavefield%20processing%20by%20using%20FCN%20for%20delamination.jpg" alt="Logo" height="450">
+    <img src="https://github.com/Arshianb/Delamination-detection-in-composite-laminates-using-deep-learning/raw/Master/Full%20wavefield%20processing%20by%20using%20FCN%20for%20delamination.jpg" alt="Logo" height="400">
   </a>
     <h1 align="center">Delamination detection in composite laminates using deep learning</h1>
 </p>
