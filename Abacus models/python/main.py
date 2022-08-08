@@ -10,10 +10,10 @@ from copy_the_case_delamination1 import copy_the_caseDelamination1
 
 # i = 91
 for i in range(20, 101):
-    # copy_the_caseDelamination1(i)
-    # move_delamination_onBeam1(i)
-    # moveBeam2(i)
-    # EditPartitionBEam1(i)
-    # edit_mesh(i)
+    copy_the_caseDelamination1(i)
+    move_delamination_onBeam1(i)
+    moveBeam2(i)
+    EditPartitionBEam1(i)
+    edit_mesh(i)
     Submit_the_job(i)
-    # time.sleep(1500)
+    time.sleep(1500)
