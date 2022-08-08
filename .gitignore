@@ -11,6 +11,7 @@ Full wavefield processing by using FCN for delamination/save_model_finals.h5
 Abacus models/modal analysis/3d shell planner/X_a diffrence/job*
 Abacus models/modal analysis/3d shell planner/a diffrence/job*
 Abacus models/Base vibration model/job*
+Abacus models/Base vibration model/ABQcaeK*
 # Executables
 *.swf
 *.air
