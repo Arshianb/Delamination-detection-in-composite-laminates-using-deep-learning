@@ -1,0 +1,10 @@
+index = 2 and i = 0.04 
+index = 3 and i = 0.0341299129913 
+index = 4 and i = 0.0204785478548 
+index = 5 and i = 0.0146259625963 
+index = 6 and i = 0.0113776377638 
+index = 7 and i = 0.00930893089309 
+index = 8 and i = 0.00787378737874 
+index = 9 and i = 0.00682368236824 
+index = 10 and i = 0.00602210221022 
+index = 11 and i = 0.00538853885389 

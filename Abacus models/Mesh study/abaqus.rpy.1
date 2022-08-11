@@ -1,0 +1,238 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by 795593 on Thu Aug 11 00:14:12 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=291.390625, 
+    height=116.805549621582)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Modal Analysis.cae')
+#: The model database "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Mesh study\Modal Analysis.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+a.regenerate()
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+cliCommand("""from math import floor""")
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh, edit_mesh_with_meshNum""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1, copy_the_caseDelamination1_ForModealAnalysis""")
+cliCommand("""import numpy as np""")
+cliCommand("""from intraction import Intraction""")
+cliCommand("""import os""")
+cliCommand("""# i = 91""")
+cliCommand("""index = 1""")
+cliCommand("""# for i in np.arange(0.1, 0.001, 1000):""")
+cliCommand("""last_mesh = 0""")
+cliCommand("""for i in np.linspace(0.04, 0.005, 10000):
+    
+    current_mesh = round(0.0512/i)
+    if current_mesh!=last_mesh:
+        print("i = ", i)
+        file = open("text.txt", "a") 
+        copy_the_caseDelamination1_ForModealAnalysis(index)
+        edit_mesh_with_meshNum(index, i)
+        Intraction(index, i)
+        Submit_the_job(index)
+        # time.sleep(5)
+        while os.path.exists('C:\\\\Users\\\\795593\\OneDrive\\\\Desktop\\\\Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-{}.023'.format(index)) == False:
+            time.sleep(0.1)
+        while os.path.exists('C:\\\\Users\\\\795593\\OneDrive\\\\Desktop\\\\Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-{}.023'.format(index)):
+            time.sleep(0.1)
+            # print(os.path.exists('C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/modal analysis Project/Job-{}.023'.format(index)))
+        index = index + 1
+        file.write("index = {} and i = {} \\n".format(index, i)) 
+        file.close()
+        last_mesh = round(0.0512/i)
+""")
+#: ('i = ', 0.04)
+#: The model "Delamination-forModalAnalysis-Case-1" has been created.
+#: ('i = ', 0.03412991299129913)
+#: The model "Delamination-forModalAnalysis-Case-2" has been created.
+#: ('i = ', 0.020478547854785475)
+#: The model "Delamination-forModalAnalysis-Case-3" has been created.
+#: ('i = ', 0.014625962596259624)
+#: The model "Delamination-forModalAnalysis-Case-4" has been created.
+#: ('i = ', 0.011377637763776375)
+#: The model "Delamination-forModalAnalysis-Case-5" has been created.
+#: ('i = ', 0.009308930893089304)
+#: The model "Delamination-forModalAnalysis-Case-6" has been created.
+#: ('i = ', 0.007873787378737868)
+#: The model "Delamination-forModalAnalysis-Case-7" has been created.
+#: ('i = ', 0.0068236823682368206)
+#: The model "Delamination-forModalAnalysis-Case-8" has been created.
+#: ('i = ', 0.006022102210221016)
+#: The model "Delamination-forModalAnalysis-Case-9" has been created.
+#: ('i = ', 0.005388538853885384)
+#: The model "Delamination-forModalAnalysis-Case-10" has been created.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+#: Job Job-1: Abaqus/Standard completed successfully.
+#: Job Job-1 completed successfully. 
+#: Job Job-2: Analysis Input File Processor completed successfully.
+#: Job Job-2: Abaqus/Standard completed successfully.
+#: Job Job-2 completed successfully. 
+#: Job Job-3: Analysis Input File Processor completed successfully.
+#: Error in job Job-10: XML parsing failure for job Job-10.  Shutting down socket and terminating all further messages.  Please check the .log, .dat, .sta, or .msg files for information about the status of the job.
+#: Job Job-10 aborted due to errors.
+p = mdb.models['Delamination-forModalAnalysis-Case-7'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p = mdb.models['Delamination-forModalAnalysis-Case-10'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.28965, 
+    farPlane=1.60666, width=1.76729, height=0.613201, viewOffsetX=0.107548, 
+    viewOffsetY=-0.0416653)
+a = mdb.models['Delamination-forModalAnalysis-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-10.odb')
+#: Model: C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-10.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.0925, 
+    farPlane=1.91013, width=1.09655, height=0.379471, viewOffsetX=0.0063685, 
+    viewOffsetY=0.00862219)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.06505, 
+    farPlane=1.90897, width=1.13724, height=0.393552, viewOffsetX=-0.0258765, 
+    viewOffsetY=0.00185908)
+p = mdb.models['Delamination-forModalAnalysis-Case-10'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.26148, 
+    farPlane=1.63483, width=2.08129, height=0.722151, viewOffsetX=0.231573, 
+    viewOffsetY=-0.0587691)
+p = mdb.models['Delamination-forModalAnalysis-Case-10'].parts['Beam1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=('[#ffffffff:3 #7f ]', ), )
+p.deleteMesh(regions=pickedRegions)
+p = mdb.models['Delamination-forModalAnalysis-Case-10'].parts['Beam1']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#ffffffff:7 #f ]', ), )
+p.seedEdgeBySize(edges=pickedEdges, size=0.004, deviationFactor=0.1, 
+    minSizeFactor=0.1)
+p = mdb.models['Delamination-forModalAnalysis-Case-10'].parts['Beam1']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.30653, 
+    farPlane=1.58978, width=1.58202, height=0.548917, viewOffsetX=0.255305, 
+    viewOffsetY=-0.00352508)
+a = mdb.models['Delamination-forModalAnalysis-Case-10'].rootAssembly
+a.regenerate()
+a = mdb.models['Delamination-forModalAnalysis-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-10.odb'])
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-1.odb')
+#: Model: C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+odb = session.odbs['C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-1.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Composite modal damping: CD for Whole Model', steps=(
+    'Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.XYPlot('XYPlot-1')
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+odb = session.odbs['C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-1.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Effective mass, x-component: EM1 for Whole Model', 
+    steps=('Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-1.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Effective mass, z-component: EM3 for Whole Model', 
+    steps=('Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+a = mdb.models['Delamination-forModalAnalysis-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Delamination-forModalAnalysis-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-1.odb'])
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-9.odb')
+#: Model: C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-9.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+mdb.save()
+#: The model database has been saved to "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Mesh study\Modal Analysis.cae".

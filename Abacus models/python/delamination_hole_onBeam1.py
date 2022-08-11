@@ -61,6 +61,8 @@ def move_delamination_onBeam1(caseDelamination = 4):
             cte_num2 = 1
         if caseDelamination>90 and caseDelamination<101:
             cte_num2 = 0
+    else:
+        cte_num2 = 9
     mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].VerticalDimension(
         textPoint=(0.00633746385574341, -0.0928356051445007), value=(cte_num2*0.0512+0.0256), 
         vertex1=mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices[circle_index], 

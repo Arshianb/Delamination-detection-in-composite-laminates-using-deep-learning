@@ -47,6 +47,9 @@ def moveBeam2(caseDelaminationNum=4):
         if caseDelaminationNum>90 and caseDelaminationNum<101:
             cte_num = caseDelaminationNum - 90
             cte_num2 = -9
+    else:
+        cte_num = caseDelaminationNum
+        cte_num2 = 0
     mdb.models['Delamination-Case-{}'.format(caseDelaminationNum)].rootAssembly.translate(instanceList=(
     'Beam2-1', ), vector=(0.0512*(cte_num-1), cte_num2*0.0512, 0.0))
     mdb.models['Delamination-Case-{}'.format(caseDelaminationNum)].rootAssembly.translate(instanceList=(

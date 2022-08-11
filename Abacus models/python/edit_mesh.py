@@ -20,3 +20,24 @@ def edit_mesh(DelaminationCase = 4):
 
 
     mdb.models['Delamination-Case-{}'.format(DelaminationCase)].parts['Beam1'].generateMesh()
+
+def edit_mesh_with_meshNum(DelaminationCase = 4, i = 0.1):
+    mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam1'].seedEdgeBySize(
+        deviationFactor=0.1, edges=
+        mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam1'].edges.getSequenceFromMask(
+        ('[#ffffffff:7 #f ]', ), ), minSizeFactor=0.1, size=i)
+    mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam1'].generateMesh()
+
+    mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam2'].seedEdgeBySize(constraint=
+        FINER, deviationFactor=0.1, edges=
+        mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam2'].edges.getSequenceFromMask(
+        ('[#ff ]', ), ), minSizeFactor=0.1, size=i)
+    mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam2'].generateMesh()
+
+    mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam3'].seedEdgeBySize(constraint=
+        FINER, deviationFactor=0.1, edges=
+        mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam3'].edges.getSequenceFromMask(
+        ('[#ff ]', ), ), minSizeFactor=0.1, size=i)
+    mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].parts['Beam3'].generateMesh()
+
+    

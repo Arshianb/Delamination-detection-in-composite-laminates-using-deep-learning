@@ -17,3 +17,8 @@ from connectorBehavior import *
 def copy_the_caseDelamination1(NewCaseDelamination_num):
     mdb.Model(name='Delamination-Case-{}'.format(NewCaseDelamination_num), objectToCopy=
     mdb.models['Delamination-Case-1'])
+
+
+def copy_the_caseDelamination1_ForModealAnalysis(NewCaseDelamination_num):
+    mdb.Model(name='Delamination-forModalAnalysis-Case-{}'.format(NewCaseDelamination_num), objectToCopy=
+    mdb.models['Delamination-Case-1'])

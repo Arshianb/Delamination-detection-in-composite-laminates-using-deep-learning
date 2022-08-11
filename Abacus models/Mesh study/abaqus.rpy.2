@@ -1,0 +1,114 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by 795593 on Thu Aug 11 08:12:22 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=291.390625, 
+    height=116.805549621582)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Modal Analysis.cae')
+#: The model database "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Mesh study\Modal Analysis.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+del mdb.jobs['Job-11']
+del mdb.jobs['Job-12']
+del mdb.jobs['Job-13']
+del mdb.jobs['Job-14']
+del mdb.jobs['Job-15']
+del mdb.jobs['Job-16']
+del mdb.jobs['Job-17']
+del mdb.jobs['Job-18']
+del mdb.jobs['Job-19']
+del mdb.jobs['Job-20']
+del mdb.jobs['Job-21']
+del mdb.jobs['Job-22']
+del mdb.jobs['Job-23']
+del mdb.jobs['Job-24']
+del mdb.jobs['Job-25']
+del mdb.jobs['Job-26']
+del mdb.jobs['Job-27']
+del mdb.jobs['Job-28']
+del mdb.jobs['Job-29']
+del mdb.jobs['Job-30']
+del mdb.jobs['Job-31']
+del mdb.jobs['Job-32']
+del mdb.jobs['Job-33']
+del mdb.jobs['Job-34']
+del mdb.jobs['Job-35']
+del mdb.jobs['Job-36']
+del mdb.jobs['Job-37']
+del mdb.jobs['Job-38']
+del mdb.jobs['Job-39']
+del mdb.jobs['Job-40']
+del mdb.jobs['Job-41']
+del mdb.jobs['Job-42']
+del mdb.jobs['Job-43']
+del mdb.jobs['Job-44']
+del mdb.jobs['Job-45']
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-10.odb')
+#: Model: C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-10.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+a = mdb.models['Delamination-forModalAnalysis-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.34726, 
+    farPlane=1.54905, width=1.12564, height=0.390567, viewOffsetX=0.0251481, 
+    viewOffsetY=0.0520893)
+p = mdb.models['Delamination-forModalAnalysis-Case-10'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.38884, 
+    farPlane=1.50747, width=0.664755, height=0.230652, viewOffsetX=-0.100307, 
+    viewOffsetY=0.149665)
+a = mdb.models['Delamination-forModalAnalysis-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.37271, 
+    farPlane=1.5236, width=0.841722, height=0.292055, viewOffsetX=-0.0568926, 
+    viewOffsetY=0.127541)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF, 
+    interactions=ON, constraints=ON, connectors=ON, engineeringFeatures=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.37673, 
+    farPlane=1.51958, width=0.798887, height=0.276463, viewOffsetX=-0.0150478, 
+    viewOffsetY=0.165139)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
