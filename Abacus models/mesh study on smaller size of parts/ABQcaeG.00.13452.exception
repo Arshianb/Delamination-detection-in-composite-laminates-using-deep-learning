@@ -1,0 +1,29 @@
+<Description>
+   ABAQUS/ABQcaeG rank 0 received the ABORT signal
+
+</Description>
+
+<Context>
+   ABQcaeG
+</Context>
+
+<Callstack>
+</Callstack>
+
+<Memory>
+   <Current>             153 MB </Current>
+   <Resident>            210 MB </Resident>
+   <Physical>          12207 MB </Physical>
+   <Limit>                 0 MB </Limit>
+   <Accessible>        12207 MB </Accessible>
+   <Allocator>            DL    </Allocator>
+</Memory>
+
+<Directories>
+  <current> C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\mesh study on smaller size of parts </current> <free>     49 GB </free>   <used>     84 GB </used> 
+     <temp> C:\Users\arshi\AppData\Local\Temp </temp>    <free>     49 GB </free>
+</Directories>
+
+<Installation>
+</Installation>
+

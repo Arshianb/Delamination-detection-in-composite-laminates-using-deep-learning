@@ -14,33 +14,41 @@ from visualization import *
 from connectorBehavior import *
 
 
-def move_delamination_onBeam1(caseDelamination = 4):
-    mdb.models['Delamination-Case-{}'.format(caseDelamination)].ConstrainedSketch(name='__edit__', 
+def move_delamination_onBeam1(model_name, caseDelamination = 4, part_size = 0.512, ):
+    
+    mdb.models['{}-{}'.format(model_name, caseDelamination)].ConstrainedSketch(name='__edit__', 
         objectToCopy=
-        mdb.models['Delamination-Case-{}'.format(caseDelamination)].parts['Beam1'].features['Shell planar-1'].sketch)
-    mdb.models['Delamination-Case-{}'.format(caseDelamination)].parts['Beam1'].projectReferencesOntoSketch(
+        mdb.models['{}-{}'.format(model_name, caseDelamination)].parts['Beam1'].features['Shell planar-1'].sketch)
+    mdb.models['{}-{}'.format(model_name, caseDelamination)].parts['Beam1'].projectReferencesOntoSketch(
         filter=COPLANAR_EDGES, sketch=
-        mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'], upToFeature=
-        mdb.models['Delamination-Case-{}'.format(caseDelamination)].parts['Beam1'].features['Shell planar-1'])
-    for i in mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].dimensions.keys():
+        mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'], upToFeature=
+        mdb.models['{}-{}'.format(model_name, caseDelamination)].parts['Beam1'].features['Shell planar-1'])
+    for i in mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].dimensions.keys():
         try:
-            if mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].dimensions[i].value == 0.0256:
-                mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].delete(objectList=(
-                    mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].dimensions[i], ))
-            # else:
-            if abs(mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].dimensions[i].value - (0.0512*9+0.0256)) < 0.0001:
-                mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].delete(objectList=(
-                    mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].dimensions[i], ))
+            print("1 = ", mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].dimensions[i].value)
+            if abs( mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].dimensions[i].value - part_size/20)<0.0001:
+                mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].delete(objectList=(
+                    mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].dimensions[i], ))
+                continue
+            print("2 = ", part_size/20)
+            if abs(mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].dimensions[i].value - (part_size/10*9+part_size/20)) < 0.0001:
+                mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].delete(objectList=(
+                    mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].dimensions[i], ))
+                continue
+            print(part_size/10*9+part_size/20)
+
+            print("-----")
+
         except:
             pass
     circle_index = 0
     origin_index = 0
 
-    for j in mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices.keys():
-        if abs(mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices[j].coords[0] - 0.0256
-        )<0.0001 and abs(mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices[j].coords[1] - 0.4864) < 0.0001:
+    for j in mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].vertices.keys():
+        if abs(mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].vertices[j].coords[0] - part_size/20
+        )<0.001 and abs(mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].vertices[j].coords[1] - (part_size/10*9+part_size/20)) < 0.001:
             circle_index = j
-        if mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices[j].coords == (0, 0):
+        if mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].vertices[j].coords == (0, 0):
             origin_index = j
     if caseDelamination>10:
         if caseDelamination>10 and caseDelamination<21:
@@ -63,10 +71,10 @@ def move_delamination_onBeam1(caseDelamination = 4):
             cte_num2 = 0
     else:
         cte_num2 = 9
-    mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].VerticalDimension(
-        textPoint=(0.00633746385574341, -0.0928356051445007), value=(cte_num2*0.0512+0.0256), 
-        vertex1=mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices[circle_index], 
-        vertex2=mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices[origin_index])
+    mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].VerticalDimension(
+        textPoint=(0.00633746385574341, -0.0928356051445007), value=(cte_num2*part_size/10+part_size/20), 
+        vertex1=mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].vertices[circle_index], 
+        vertex2=mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].vertices[origin_index])
 
     if caseDelamination < 11:
         cte_num = caseDelamination
@@ -88,11 +96,11 @@ def move_delamination_onBeam1(caseDelamination = 4):
         cte_num = caseDelamination-80
     if caseDelamination > 90 and caseDelamination < 101:
         cte_num = caseDelamination-90
-    mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].HorizontalDimension(
-        textPoint=(0.00633746385574341, -0.0928356051445007), value=0.0256*(cte_num*2-1), 
-        vertex1=mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices[circle_index], 
-        vertex2=mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'].vertices[origin_index])
-    mdb.models['Delamination-Case-{}'.format(caseDelamination)].parts['Beam1'].features['Shell planar-1'].setValues(
-    sketch=mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__'])
-    del mdb.models['Delamination-Case-{}'.format(caseDelamination)].sketches['__edit__']
-    mdb.models['Delamination-Case-{}'.format(caseDelamination)].parts['Beam1'].regenerate()
+    mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].HorizontalDimension(
+        textPoint=(0.00633746385574341, -0.0928356051445007), value=part_size/20*(cte_num*2-1), 
+        vertex1=mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].vertices[circle_index], 
+        vertex2=mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'].vertices[origin_index])
+    mdb.models['{}-{}'.format(model_name, caseDelamination)].parts['Beam1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__'])
+    del mdb.models['{}-{}'.format(model_name, caseDelamination)].sketches['__edit__']
+    mdb.models['{}-{}'.format(model_name, caseDelamination)].parts['Beam1'].regenerate()

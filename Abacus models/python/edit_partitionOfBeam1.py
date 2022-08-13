@@ -13,21 +13,21 @@ from visualization import *
 from connectorBehavior import *
 
 
-def EditPartitionBEam1(DelaminationCase = 4):
+def EditPartitionBEam1(model_name, DelaminationCase = 4, part_size = 250/1000):
     try:
-        mdb.models['Delamination-Case-{}'.format(DelaminationCase)].ConstrainedSketch(name='__edit__', 
+        mdb.models['{}-{}'.format(model_name,DelaminationCase)].ConstrainedSketch(name='__edit__', 
             objectToCopy=
-            mdb.models['Delamination-Case-{}'.format(DelaminationCase)].parts['Beam1'].features['Partition face-2'].sketch)
-        mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__'].delete(objectList=(
-            mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__'].geometry[4], 
-            mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__'].geometry[5]))
+            mdb.models['{}-{}'.format(model_name,DelaminationCase)].parts['Beam1'].features['Partition face-2'].sketch)
+        mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__'].delete(objectList=(
+            mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__'].geometry[2], 
+            mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__'].geometry[3]))
     except:
         pass
     if DelaminationCase < 11:
-        mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__'].Line(point1=(0.0512*(DelaminationCase-1), 
-            0.4608), point2=(0.0512*(DelaminationCase), 0.4608 + 0.0512))
-        mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__'].Line(point1=(0.0512*(DelaminationCase-1), 
-            0.4608 + 0.0512), point2=(0.0512*(DelaminationCase), 0.4608))
+        mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__'].Line(point1=(part_size/10*(DelaminationCase-1), 
+            9*part_size/10), point2=(part_size/10*(DelaminationCase), 9*part_size/10 + part_size/10))
+        mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__'].Line(point1=(part_size/10*(DelaminationCase-1), 
+            9*part_size/10 + part_size/10), point2=(part_size/10*(DelaminationCase), 0.9*part_size))
 
     if DelaminationCase < 21 and DelaminationCase > 10:
         cte_num = DelaminationCase - 10
@@ -57,11 +57,11 @@ def EditPartitionBEam1(DelaminationCase = 4):
         cte_num = DelaminationCase - 90
         cte_num2 = 0
     if DelaminationCase > 10:
-        mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__'].Line(point1=(0.0512*(cte_num-1), 
-            (cte_num2)*0.0512), point2=(0.0512*(cte_num), (cte_num2)*0.0512 + 0.0512))
-        mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__'].Line(point1=(0.0512*(cte_num-1), 
-            (cte_num2)*0.0512 + 0.0512), point2=(0.0512*(cte_num), (cte_num2)*0.0512))
-    mdb.models['Delamination-Case-{}'.format(DelaminationCase)].parts['Beam1'].features['Partition face-2'].setValues(
-        sketch=mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__'])
-    del mdb.models['Delamination-Case-{}'.format(DelaminationCase)].sketches['__edit__']
-    mdb.models['Delamination-Case-{}'.format(DelaminationCase)].parts['Beam1'].regenerate()
+        mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__'].Line(point1=(part_size/10*(cte_num-1), 
+            (cte_num2)*part_size/10), point2=(part_size/10*(cte_num), (cte_num2)*part_size/10 + part_size/10))
+        mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__'].Line(point1=(part_size/10*(cte_num-1), 
+            (cte_num2)*part_size/10+ part_size/10), point2=(part_size/10*(cte_num), (cte_num2)*part_size/10))
+    mdb.models['{}-{}'.format(model_name,DelaminationCase)].parts['Beam1'].features['Partition face-2'].setValues(
+        sketch=mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__'])
+    del mdb.models['{}-{}'.format(model_name,DelaminationCase)].sketches['__edit__']
+    mdb.models['{}-{}'.format(model_name,DelaminationCase)].parts['Beam1'].regenerate()

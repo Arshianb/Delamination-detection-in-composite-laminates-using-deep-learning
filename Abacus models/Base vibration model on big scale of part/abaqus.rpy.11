@@ -1,0 +1,193 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by 795593 on Thu Aug 11 16:32:31 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=291.390625, 
+    height=197.092590332031)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/main-model.cae')
+#: The model database "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\main-model.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+#--- Recover file: 'main-model.rec' ---
+# -*- coding: mbcs -*- 
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-15', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-15', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-15'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-16', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-16', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-16'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-17', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-17', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-17'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-18', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-18', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-18'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-19', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-19', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-19'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-20', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-20', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-20'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-21', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-21', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-21'].submit(consistencyChecking=OFF)
+#--- End of Recover file ------
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+del mdb.jobs['Job-20']
+del mdb.jobs['Job-21']
+a = mdb.models['Delamination-Case-5'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+a = mdb.models['Delamination-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.08863, 
+    farPlane=2.2888, width=1.09694, height=0.59788, viewOffsetX=0.0380361, 
+    viewOffsetY=-0.0309702)
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-4.odb')
+#: Model: C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-4.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['Delamination-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Delamination-Case-11'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+a = mdb.models['Delamination-Case-2'].rootAssembly
+a.regenerate()
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+del mdb.models['Delamination-Case-2']
+del mdb.models['Delamination-Case-3']
+del mdb.models['Delamination-Case-4']
+del mdb.models['Delamination-Case-5']
+del mdb.models['Delamination-Case-6']
+del mdb.models['Delamination-Case-7']
+del mdb.models['Delamination-Case-8']
+del mdb.models['Delamination-Case-9']
+del mdb.models['Delamination-Case-10']
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+del mdb.jobs['Job-2']
+del mdb.jobs['Job-3']
+del mdb.jobs['Job-4']
+del mdb.jobs['Job-5']
+del mdb.jobs['Job-6']
+del mdb.jobs['Job-7']
+del mdb.jobs['Job-8']
+del mdb.jobs['Job-9']
+del mdb.jobs['Job-10']
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-4.odb'])
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-11.odb')
+#: Model: C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-11.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-11.odb'])
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb')
+#: Model: C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)

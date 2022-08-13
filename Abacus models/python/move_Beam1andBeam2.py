@@ -13,12 +13,12 @@ from visualization import *
 from connectorBehavior import *
 
 
-def moveBeam2(caseDelaminationNum=4):
+def moveBeam2(model_name, caseDelaminationNum=4, part_size = 250/1000):
     if caseDelaminationNum<11:
-        mdb.models['Delamination-Case-{}'.format(caseDelaminationNum)].rootAssembly.translate(instanceList=(
-        'Beam2-1', ), vector=(0.0512*(caseDelaminationNum-1), 0.0, 0.0))
-        mdb.models['Delamination-Case-{}'.format(caseDelaminationNum)].rootAssembly.translate(instanceList=(
-        'Beam3-1', ), vector=(0.0512*(caseDelaminationNum-1), 0.0, 0.0))
+        mdb.models['{}-{}'.format(model_name,caseDelaminationNum)].rootAssembly.translate(instanceList=(
+        'Beam2-1', ), vector=(part_size/10*(caseDelaminationNum-1), 0.0, 0.0))
+        mdb.models['{}-{}'.format(model_name,caseDelaminationNum)].rootAssembly.translate(instanceList=(
+        'Beam3-1', ), vector=(part_size/10*(caseDelaminationNum-1), 0.0, 0.0))
     if caseDelaminationNum>10:
         if caseDelaminationNum>10 and caseDelaminationNum<21:
             cte_num = caseDelaminationNum - 10
@@ -47,13 +47,10 @@ def moveBeam2(caseDelaminationNum=4):
         if caseDelaminationNum>90 and caseDelaminationNum<101:
             cte_num = caseDelaminationNum - 90
             cte_num2 = -9
-    else:
-        cte_num = caseDelaminationNum
-        cte_num2 = 0
-    mdb.models['Delamination-Case-{}'.format(caseDelaminationNum)].rootAssembly.translate(instanceList=(
-    'Beam2-1', ), vector=(0.0512*(cte_num-1), cte_num2*0.0512, 0.0))
-    mdb.models['Delamination-Case-{}'.format(caseDelaminationNum)].rootAssembly.translate(instanceList=(
-    'Beam3-1', ), vector=(0.0512*(cte_num-1), cte_num2*0.0512, 0.0))
+        mdb.models['{}-{}'.format(model_name,caseDelaminationNum)].rootAssembly.translate(instanceList=(
+        'Beam2-1', ), vector=(part_size/10*(cte_num-1), cte_num2*part_size/10, 0.0))
+        mdb.models['{}-{}'.format(model_name,caseDelaminationNum)].rootAssembly.translate(instanceList=(
+        'Beam3-1', ), vector=(part_size/10*(cte_num-1), cte_num2*part_size/10, 0.0))
     # if caseDelaminationNum>20 and caseDelaminationNum<31:
     #     cte_num = caseDelaminationNum - 20
     #     mdb.models['Delamination-Case-{}'.format(caseDelaminationNum)].rootAssembly.translate(instanceList=(

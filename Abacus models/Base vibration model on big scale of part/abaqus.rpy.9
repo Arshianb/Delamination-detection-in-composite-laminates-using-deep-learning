@@ -1,0 +1,346 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by arshi on Thu Aug 11 15:53:06 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=173.510986328125, 
+    height=94.7265625)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/main-model.cae')
+#: The model database "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\main-model.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, optimizationTasks=OFF, 
+    geometricRestrictions=OFF, stopConditions=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+mdb.models['Delamination-Case-1'].loads['Load-1'].setValues(cf3=0.00011, 
+    distributionType=UNIFORM, field='')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON, loads=OFF, 
+    bcs=OFF, predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.2868, 
+    farPlane=1.60951, width=1.09085, height=0.452813, viewOffsetX=0.0191624, 
+    viewOffsetY=0.0270198)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+del mdb.jobs['Job-1']
+del mdb.jobs['Job-2']
+del mdb.jobs['Job-3']
+del mdb.jobs['Job-4']
+del mdb.jobs['Job-5']
+del mdb.jobs['Job-6']
+del mdb.jobs['Job-7']
+del mdb.jobs['Job-8']
+mdb.Job(name='Job-1', model='Delamination-Case-1', description='', 
+    type=ANALYSIS, atTime=None, waitMinutes=0, waitHours=0, queue=None, 
+    memory=90, memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, numThreadsPerMpiProcess=1, 
+    multiprocessingMode=DEFAULT, numCpus=2, numDomains=2, numGPUs=1)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: The job input file "Job-1.inp" has been submitted for analysis.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb')
+#: Model: C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.971389, 
+    farPlane=1.98564, width=1.05212, height=0.404572, viewOffsetX=0.00024157, 
+    viewOffsetY=0.000242315)
+mdb.jobs['Job-1'].kill()
+#: Error in job Job-1: Process terminated by external request (SIGTERM or SIGINT received).
+#: Job Job-1: Abaqus/Standard was terminated prior to analysis completion.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.01988, 
+    farPlane=1.93715, width=0.862449, height=0.331636, viewOffsetX=-0.00858285, 
+    viewOffsetY=-0.0126041)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+#: Error in job Job-1: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.03295, 
+    farPlane=1.93091, width=0.8735, height=0.335886, viewOffsetX=-0.0194022, 
+    viewOffsetY=0.0125857)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: The job input file "Job-1.inp" has been submitted for analysis.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb')
+#: Model: C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#* There is no valid step data available on the database. If the analysis is 
+#* running, the database must be closed and reopened once the results have been 
+#* initialized. The requested operation has been cancelled.
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb'])
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#* rom_Transporter::GetClassBagForRead - Table for class "res_Frame" is missing 
+#* from the database: 
+#* C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus 
+#* models/Base vibration model/Job-1.odb. The database is corrupt.
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.jobs['Job-1'].kill()
+#: Error in job Job-1: Process terminated by external request (SIGTERM or SIGINT received).
+#: Job Job-1: Abaqus/Standard was terminated prior to analysis completion.
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: Abaqus Error: Detected lock file Job-1.lck. Please confirm that no other applications are attempting to write to the output database associated with this job before removing the lock file and resubmitting.
+#: Abaqus/Analysis exited with error(s).
+#* Unable to start analysis job
+#* Abaqus Error: Detected lock file Job-1.lck. Please confirm that no other 
+#* applications are attempting to write to the output database associated with 
+#* this job before removing the lock file and resubmitting.
+#* Abaqus/Analysis exited with error(s).
+#* 
+#* 
+#: Error in job Job-1: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job Job-1 aborted due to errors.
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: The job input file "Job-1.inp" has been submitted for analysis.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb')
+#: Model: C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.10286, 
+    farPlane=1.87038, width=0.534388, height=0.205487, viewOffsetX=0.000953155, 
+    viewOffsetY=0.00258222)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.07259, 
+    farPlane=1.90065, width=0.804727, height=0.309441, viewOffsetX=0.0305305, 
+    viewOffsetY=-0.00825758)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+#: Job Job-1: Abaqus/Standard completed successfully.
+#: Job Job-1 completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb'])
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.03497, 
+    farPlane=1.93827, width=1.05804, height=0.406846, viewOffsetX=0.114136, 
+    viewOffsetY=0.00523826)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb'])
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+odb = session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Spatial velocity: V3 PI: BEAM1-1 Node 110 in NSET SET-3', 
+    steps=('Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.XYPlot('XYPlot-1')
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+odb = session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Spatial displacement: U3 PI: BEAM1-1 Node 110 in NSET SET-3', 
+    steps=('Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-1.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Spatial acceleration: A3 PI: BEAM1-1 Node 110 in NSET SET-3', 
+    steps=('Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1""")
+cliCommand("""import os""")
+cliCommand("""for i in range(2, 3):
+    copy_the_caseDelamination1(i)
+    move_delamination_onBeam1(i)
+    moveBeam2(i)
+    EditPartitionBEam1(i)
+    edit_mesh(i)
+    # time.sleep(0.5)
+    Submit_the_job(i)
+    while os.path.exists('C:\\\\Users\\\\arshi\\\\OneDrive\\\\Desktop\\\\Delamination-detection-in-composite-laminates-using-deep-learning\\\\Abacus models\\\\Base vibration model/Job-{}.023'.format(i)) == False:
+        time.sleep(0.1)
+    while os.path.exists('C:\\\\Users\\\\arshi\\\\OneDrive\\\\Desktop\\\\Delamination-detection-in-composite-laminates-using-deep-learning\\\\Abacus models\\\\Base vibration model/Job-{}.023'.format(i)):
+        time.sleep(0.1)
+""")
+#: The model "Delamination-Case-2" has been created.
+#: Warning: Mesh deleted in 6 regions due to geometry association failure.
+#: Abaqus Error: The number of cpus (4) exceeds the number of cpus available (2).
+#: Abaqus/Analysis exited with error(s).
+#* Unable to start analysis job
+#* Abaqus Error: The number of cpus (4) exceeds the number of cpus available 
+#* (2).
+#* Abaqus/Analysis exited with error(s).
+#* 
+#* 
+#* File 
+#* "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus 
+#* models\python\submit_TheJob.py", line 28, in Submit_the_job
+#*     
+#* mdb.jobs['Job-{}'.format(Delamination_case)].submit(consistencyChecking=OFF)
+a = mdb.models['Delamination-Case-2'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.37702, 
+    farPlane=1.51929, width=0.429578, height=0.189985, viewOffsetX=-0.0688935, 
+    viewOffsetY=0.156864)
+del mdb.models['Delamination-Case-2']
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1""")
+cliCommand("""import os""")
+cliCommand("""for i in range(2, 3):
+    copy_the_caseDelamination1(i)
+    move_delamination_onBeam1(i)
+    moveBeam2(i)
+    EditPartitionBEam1(i)
+    edit_mesh(i)
+""")
+#: The model "Delamination-Case-2" has been created.
+#: Warning: Mesh deleted in 6 regions due to geometry association failure.
+a = mdb.models['Delamination-Case-2'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.35708, 
+    farPlane=1.53923, width=0.618711, height=0.273631, viewOffsetX=-0.0295786, 
+    viewOffsetY=0.150311)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.28727, 
+    farPlane=1.61365, width=0.586883, height=0.259555, cameraPosition=(
+    -0.062968, 0.214982, 1.41446), cameraUpVector=(-0.103117, 0.994643, 
+    0.00728403), cameraTarget=(0.271513, 0.259971, 0.00618398), 
+    viewOffsetX=-0.028057, viewOffsetY=0.142578)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.2216, 
+    farPlane=1.79763, width=0.556946, height=0.246315, cameraPosition=(
+    -0.460806, 0.68022, 1.2591), cameraUpVector=(0.110962, 0.957281, 
+    -0.267023), cameraTarget=(0.233483, 0.264728, 0.0580735), 
+    viewOffsetX=-0.0266258, viewOffsetY=0.135305)
+del mdb.models['Delamination-Case-2']
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.save()
+#: The model database has been saved to "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\main-model.cae".

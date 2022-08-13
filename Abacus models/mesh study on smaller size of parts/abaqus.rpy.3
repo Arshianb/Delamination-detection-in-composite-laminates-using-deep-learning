@@ -1,0 +1,580 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by arshi on Sat Aug 13 00:02:55 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=87.1332321166992, 
+    height=118.72395324707)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/main-model.cae')
+#: The model database "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\mesh study on smaller size of parts\main-model.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['mesh-Size-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.691811, 
+    farPlane=0.722402, width=0.104084, height=0.0516094, viewOffsetX=-0.091837, 
+    viewOffsetY=0.100967)
+a = mdb.models['mesh-Size-5'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON, 
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.549322, 
+    farPlane=0.902595, width=0.194093, height=0.0962399, 
+    viewOffsetX=-0.0347529, viewOffsetY=0.0685972)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.551043, 
+    farPlane=0.900874, width=0.194701, height=0.0965414, cameraPosition=(
+    0.54057, 0.538304, 0.428522), cameraUpVector=(-0.442814, 0.563155, 
+    -0.697691), cameraTarget=(0.121438, 0.119172, 0.00939011), 
+    viewOffsetX=-0.0348618, viewOffsetY=0.0688121)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.647647, 
+    farPlane=0.802427, width=0.228834, height=0.113466, cameraPosition=(
+    0.212043, 0.289679, 0.700844), cameraUpVector=(-0.138105, 0.832215, 
+    -0.536978), cameraTarget=(0.116248, 0.114244, 0.00294697), 
+    viewOffsetX=-0.0409735, viewOffsetY=0.0808757)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.65308, 
+    farPlane=0.796993, width=0.169341, height=0.0839668, viewOffsetX=-0.067873, 
+    viewOffsetY=0.101449)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.685136, 
+    farPlane=0.729077, width=0.149419, height=0.0740886, 
+    viewOffsetX=-0.0811484, viewOffsetY=0.0932)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=(
+    '[#830c66ff #c0700e03 #71c38381 #7f ]', ), )
+p.deleteMesh(regions=pickedRegions)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#7ff #0 #3e0000 #7a00 ]', ), )
+p.seedEdgeBySize(edges=pickedEdges, size=0.00555256, deviationFactor=0.1, 
+    minSizeFactor=0.1, constraint=FINER)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#7ff #0 #60000 #3a00 ]', ), )
+p.setSeedConstraints(edges=pickedEdges, constraint=FIXED)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#7ff #0 #3e0000 #7a00 ]', ), )
+p.setSeedConstraints(edges=pickedEdges, constraint=FREE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.62245, 
+    farPlane=0.791764, width=0.567989, height=0.281633, viewOffsetX=0.0943805, 
+    viewOffsetY=-0.00360462)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.650865, 
+    farPlane=0.763348, width=0.340312, height=0.168741, viewOffsetX=0.00926085, 
+    viewOffsetY=0.0462331)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.675454, 
+    farPlane=0.73876, width=0.19111, height=0.0947608, viewOffsetX=-0.0691384, 
+    viewOffsetY=0.0828514)
+p = mdb.models['mesh-Size-6'].parts['Beam3']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-6'].parts['Beam2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-4'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-4'].parts['Beam2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-6'].parts['Beam2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['mesh-Size-5'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['mesh-Size-5'].rootAssembly
+a.regenerate()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.633133, 
+    farPlane=0.81694, width=0.304799, height=0.151132, viewOffsetX=-0.0472926, 
+    viewOffsetY=0.0691455)
+p = mdb.models['mesh-Size-5'].parts['Beam2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.619166, 
+    farPlane=0.795047, width=0.593739, height=0.294401, viewOffsetX=0.045562, 
+    viewOffsetY=-0.0203544)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=('[#7fffffff #ffffffff:2 #7f ]', ), 
+    )
+p.deleteMesh(regions=pickedRegions)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=('[#7fffffff #ffffffff:2 #7f ]', ), 
+    )
+p.setMeshControls(regions=pickedRegions, technique=STRUCTURED)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=('[#ffffffff:3 #7f ]', ), )
+p.setMeshControls(regions=pickedRegions, technique=SWEEP)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+p.generateMesh()
+p = mdb.models['mesh-Size-6'].parts['Beam2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=('[#7fffffff #ffffffff:2 #7f ]', ), 
+    )
+p.deleteMesh(regions=pickedRegions)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=('[#7fffffff #ffffffff:2 #7f ]', ), 
+    )
+p.setMeshControls(regions=pickedRegions, technique=STRUCTURED)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+f = p.faces
+pickedRegions = f.getSequenceFromMask(mask=('[#ffffffff:3 #7f ]', ), )
+p.setMeshControls(regions=pickedRegions, technique=SWEEP)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+p.generateMesh()
+p = mdb.models['mesh-Size-4'].parts['Beam2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.630548, 
+    farPlane=0.783665, width=0.517699, height=0.251062, viewOffsetX=0.0147645, 
+    viewOffsetY=0.0147298)
+a = mdb.models['mesh-Size-5'].rootAssembly
+a.regenerate()
+a = mdb.models['mesh-Size-5'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF, 
+    adaptiveMeshConstraints=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+del mdb.models['mesh-Size-5'].steps['Step-1']
+mdb.models['mesh-Size-5'].ImplicitDynamicsStep(name='Step-1', 
+    previous='Initial', timePeriod=0.01, maxNumInc=100000, 
+    timeIncrementationMethod=FIXED, initialInc=5e-06, nohaf=OFF, noStop=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+mdb.models['mesh-Size-5'].fieldOutputRequests['F-Output-1'].setValues(
+    variables=('U', ))
+regionDef=mdb.models['mesh-Size-5'].rootAssembly.allInstances['Beam1-1'].sets['outputs']
+mdb.models['mesh-Size-5'].historyOutputRequests['H-Output-1'].setValues(
+    variables=('U3', 'V3', 'A3'), region=regionDef, sectionPoints=DEFAULT, 
+    rebar=EXCLUDE)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+a = mdb.models['mesh-Size-5'].rootAssembly
+region = a.instances['Beam1-1'].sets['force']
+mdb.models['mesh-Size-5'].ConcentratedForce(name='Load-1', 
+    createStepName='Step-1', region=region, cf3=0.0001, amplitude='Amp-1', 
+    distributionType=UNIFORM, field='', localCsys=None)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "Job-5.inp" has been submitted for analysis.
+#: Job Job-5: Analysis Input File Processor completed successfully.
+mdb.jobs['Job-5'].kill()
+#: Error in job Job-5: Process terminated by external request (SIGTERM or SIGINT received).
+#: Job Job-5: Abaqus/Standard was terminated prior to analysis completion.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+#: Error in job Job-5: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+mdb.models['mesh-Size-5'].steps['Step-1'].setValues(maxNumInc=300)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.jobs['Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "Job-5.inp" has been submitted for analysis.
+#: Job Job-5: Analysis Input File Processor completed successfully.
+#: Error in job Job-5: Too many increments needed to complete the step
+#: Error in job Job-5: THE ANALYSIS HAS BEEN TERMINATED DUE TO PREVIOUS ERRORS. ALL OUTPUT REQUESTS HAVE BEEN WRITTEN FOR THE LAST CONVERGED INCREMENT.
+#: Job Job-5: Abaqus/Standard aborted due to errors.
+#: Error in job Job-5: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job Job-5 aborted due to errors.
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb')
+#: Model: C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.497856, 
+    farPlane=0.954061, width=0.566241, height=0.257111, viewOffsetX=0.050303, 
+    viewOffsetY=0.0172916)
+a = mdb.models['mesh-Size-5'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['mesh-Size-6'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+del mdb.models['mesh-Size-6'].steps['Step-1']
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+mdb.models['mesh-Size-6'].ImplicitDynamicsStep(name='Step-1', 
+    previous='Initial', timePeriod=0.01, maxNumInc=300, 
+    timeIncrementationMethod=FIXED, initialInc=5e-06, nohaf=OFF, noStop=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+a = mdb.models['mesh-Size-6'].rootAssembly
+region = a.instances['Beam1-1'].sets['force']
+mdb.models['mesh-Size-6'].ConcentratedForce(name='Load-1', 
+    createStepName='Step-1', region=region, cf3=0.0001, amplitude='Amp-1', 
+    distributionType=UNIFORM, field='', localCsys=None)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF, adaptiveMeshConstraints=ON)
+mdb.models['mesh-Size-6'].fieldOutputRequests['F-Output-1'].setValues(
+    variables=('U', ))
+regionDef=mdb.models['mesh-Size-6'].rootAssembly.allInstances['Beam1-1'].sets['outputs']
+mdb.models['mesh-Size-6'].historyOutputRequests['H-Output-1'].setValues(
+    variables=('U3', 'V3', 'A3'), region=regionDef, sectionPoints=DEFAULT, 
+    rebar=EXCLUDE)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.jobs['Job-6'].submit(consistencyChecking=OFF)
+#: The job input file "Job-6.inp" has been submitted for analysis.
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb'])
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['mesh-Size-6'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+#: Job Job-6: Analysis Input File Processor completed successfully.
+#: Error in job Job-6: Too many increments needed to complete the step
+#: Error in job Job-6: THE ANALYSIS HAS BEEN TERMINATED DUE TO PREVIOUS ERRORS. ALL OUTPUT REQUESTS HAVE BEEN WRITTEN FOR THE LAST CONVERGED INCREMENT.
+#: Job Job-6: Abaqus/Standard aborted due to errors.
+#: Error in job Job-6: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job Job-6 aborted due to errors.
+mdb.jobs['Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "Job-5.inp" has been submitted for analysis.
+#: Job Job-5: Analysis Input File Processor completed successfully.
+#: Error in job Job-5: Too many increments needed to complete the step
+#: Error in job Job-5: THE ANALYSIS HAS BEEN TERMINATED DUE TO PREVIOUS ERRORS. ALL OUTPUT REQUESTS HAVE BEEN WRITTEN FOR THE LAST CONVERGED INCREMENT.
+#: Job Job-5: Abaqus/Standard aborted due to errors.
+#: Error in job Job-5: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job Job-5 aborted due to errors.
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb')
+#: Model: C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+odb = session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Spatial acceleration: A3 PI: BEAM1-1 Node 108 in NSET OUTPUTS', 
+    steps=('Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.XYPlot('XYPlot-1')
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+a = mdb.models['mesh-Size-6'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-6.odb')
+#: Model: C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-6.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       6
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+odb = session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-6.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Spatial acceleration: A3 PI: BEAM1-1 Node 32 in NSET OUTPUTS', 
+    steps=('Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+a = mdb.models['mesh-Size-6'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+odb = session.odbs['C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-5.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Spatial acceleration: A3 PI: BEAM1-1 Node 32 in NSET OUTPUTS', 
+    steps=('Step-1', ), suppressQuery=True, __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+a = mdb.models['mesh-Size-6'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['mesh-Size-6'].steps['Step-1'].setValues(maxNumInc=100000)
+a = mdb.models['mesh-Size-5'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.models['mesh-Size-5'].steps['Step-1'].setValues(maxNumInc=1000000)
+a = mdb.models['mesh-Size-6'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+del mdb.models['mesh-Size-6'].fieldOutputRequests['F-Output-1']
+a = mdb.models['mesh-Size-5'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+del mdb.models['mesh-Size-5'].fieldOutputRequests['F-Output-1']
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.jobs['Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "Job-5.inp" has been submitted for analysis.
+#: Job Job-5: Analysis Input File Processor completed successfully.
+#: Job Job-5: Abaqus/Standard completed successfully.
+#: Job Job-5 completed successfully. 
+a = mdb.models['mesh-Size-6'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.jobs['Job-6'].submit(consistencyChecking=OFF)
+#: The job input file "Job-6.inp" has been submitted for analysis.
+#: Job Job-6: Analysis Input File Processor completed successfully.
+#: Job Job-6: Abaqus/Standard completed successfully.
+#: Job Job-6 completed successfully. 
+mdb.save()
+#: The model database has been saved to "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\mesh study on smaller size of parts\main-model.cae".
+a = mdb.models['mesh-Size-7'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+del mdb.models['mesh-Size-7']
+del mdb.models['mesh-Size-8']
+del mdb.models['mesh-Size-9']
+del mdb.models['mesh-Size-10']
+del mdb.models['mesh-Size-11']
+del mdb.models['mesh-Size-12']
+del mdb.models['mesh-Size-13']
+del mdb.models['mesh-Size-14']
+del mdb.models['mesh-Size-15']
+del mdb.models['mesh-Size-16']
+del mdb.models['mesh-Size-17']
+del mdb.models['mesh-Size-18']
+del mdb.models['mesh-Size-19']
+del mdb.models['mesh-Size-20']
+del mdb.models['mesh-Size-21']
+del mdb.models['mesh-Size-22']
+del mdb.models['mesh-Size-23']
+del mdb.models['mesh-Size-24']
+del mdb.models['mesh-Size-25']
+del mdb.models['mesh-Size-4']
+del mdb.models['mesh-Size-1']
+del mdb.models['mesh-Size-2']
+del mdb.models['mesh-Size-3']
+a = mdb.models['mesh-Size-5'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.saveAs(
+    pathName='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base Vibration for smaller parts/main-model.cae')
+#: The model database has been saved to "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base Vibration for smaller parts\main-model.cae".
+mdb.models.changeKey(fromName='mesh-Size-5', toName='Delamination-Case-1')
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.save()
+#: The model database has been saved to "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base Vibration for smaller parts\main-model.cae".
+del mdb.jobs['Job-1']
+del mdb.jobs['Job-2']
+del mdb.jobs['Job-3']
+del mdb.jobs['Job-4']
+del mdb.jobs['Job-5']
+del mdb.jobs['Job-6']
+del mdb.jobs['Job-7']
+del mdb.jobs['Job-8']
+del mdb.jobs['Job-9']
+del mdb.jobs['Job-10']
+del mdb.jobs['Job-11']
+del mdb.jobs['Job-12']
+del mdb.jobs['Job-13']
+del mdb.jobs['Job-14']
+del mdb.jobs['Job-15']
+del mdb.jobs['Job-16']
+del mdb.jobs['Job-17']
+del mdb.jobs['Job-18']
+del mdb.jobs['Job-19']
+del mdb.jobs['Job-20']
+del mdb.jobs['Job-21']
+del mdb.jobs['Job-22']
+del mdb.jobs['Job-23']
+del mdb.jobs['Job-24']
+del mdb.jobs['Job-25']
+del mdb.jobs['fifty-times-fifty']
+del mdb.jobs['two-hundred-times-two-hundred']
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1""")
+cliCommand("""import os""")
+cliCommand("""model_name = "Delamination-Case\"""")
+cliCommand("""part_size = 250/1000""")
+cliCommand("""for i in range(2, 3):
+    copy_the_caseDelamination1(model_name, i)
+    move_delamination_onBeam1(model_name, i, part_size)
+    moveBeam2(model_name, i, part_size)
+    EditPartitionBEam1(model_name, i, part_size)
+    edit_mesh(i)
+""")
+#: The model "Delamination-Case-2" has been created.
+#* FeatureError: The sketch is overdefined and cannot be used to create the 
+#* feature.
+#* 
+#* Delete the extra dimensions/constraints to remove the redundancy.
+#* File 
+#* "C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus 
+#* models/python\delamination_hole_onBeam1.py", line 96, in 
+#* move_delamination_onBeam1
+#*     sketch=mdb.models['{}-{}'.format(model_name, 
+#* caseDelamination)].sketches['__edit__'])
+a = mdb.models['Delamination-Case-2'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.508995, 
+    farPlane=0.942922, width=0.441454, height=0.199333, viewOffsetX=-0.0112277, 
+    viewOffsetY=0.00874979)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p1 = mdb.models['Delamination-Case-2'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Delamination-Case-2'].parts['Beam1']
+s = p.features['Shell planar-1'].sketch
+mdb.models['Delamination-Case-2'].ConstrainedSketch(name='__edit__', 
+    objectToCopy=s)
+s1 = mdb.models['Delamination-Case-2'].sketches['__edit__']
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=SUPERIMPOSE)
+p.projectReferencesOntoSketch(sketch=s1, 
+    upToFeature=p.features['Shell planar-1'], filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.800723, 
+    farPlane=0.863843, width=0.190791, height=0.0861491, cameraPosition=(
+    0.0388364, 0.228098, 0.832283), cameraTarget=(0.0388364, 0.228098, 0))
+s1.delete(objectList=(d[2], ))
+s1.DistanceDimension(entity1=v[4], entity2=g[2], textPoint=(
+    -0.000568557530641556, 0.257797569036484), value=0.02)
+s1.unsetPrimaryObject()
+del mdb.models['Delamination-Case-2'].sketches['__edit__']
+mdb.save()
+#: The model database has been saved to "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base Vibration for smaller parts\main-model.cae".
+p = mdb.models['Delamination-Case-2'].parts['Beam1']
+s = p.features['Shell planar-1'].sketch
+mdb.models['Delamination-Case-2'].ConstrainedSketch(name='__edit__', 
+    objectToCopy=s)
+s2 = mdb.models['Delamination-Case-2'].sketches['__edit__']
+g, v, d, c = s2.geometry, s2.vertices, s2.dimensions, s2.constraints
+s2.setPrimaryObject(option=SUPERIMPOSE)
+p.projectReferencesOntoSketch(sketch=s2, 
+    upToFeature=p.features['Shell planar-1'], filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.671995, 
+    farPlane=0.992571, width=1.09665, height=0.49518, cameraPosition=(0.233778, 
+    0.2002, 0.832283), cameraTarget=(0.233778, 0.2002, 0))
+s2.delete(objectList=(c[30], ))
+s2.unsetPrimaryObject()
+p = mdb.models['Delamination-Case-2'].parts['Beam1']
+p.features['Shell planar-1'].setValues(sketch=s2)
+del mdb.models['Delamination-Case-2'].sketches['__edit__']
+p = mdb.models['Delamination-Case-2'].parts['Beam1']
+p.regenerate()
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1""")
+cliCommand("""import os""")
+cliCommand("""model_name = "Delamination-Case\"""")
+cliCommand("""part_size = 250/1000""")
+cliCommand("""for i in range(2, 3):
+    # copy_the_caseDelamination1(model_name, i)
+    move_delamination_onBeam1(model_name, i, part_size)
+""")
+#* FeatureError: The sketch is overdefined and cannot be used to create the 
+#* feature.
+#* 
+#* Delete the extra dimensions/constraints to remove the redundancy.
+#* File 
+#* "C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus 
+#* models/python\delamination_hole_onBeam1.py", line 96, in 
+#* move_delamination_onBeam1
+#*     sketch=mdb.models['{}-{}'.format(model_name, 
+#* caseDelamination)].sketches['__edit__'])
+p = mdb.models['Delamination-Case-2'].parts['Beam1']
+s = p.features['Shell planar-1'].sketch
+mdb.models['Delamination-Case-2'].ConstrainedSketch(name='__edit__', 
+    objectToCopy=s)
+s1 = mdb.models['Delamination-Case-2'].sketches['__edit__']
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=SUPERIMPOSE)
+p.projectReferencesOntoSketch(sketch=s1, 
+    upToFeature=p.features['Shell planar-1'], filter=COPLANAR_EDGES)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.800723, 
+    farPlane=0.863843, width=0.247523, height=0.111766, cameraPosition=(
+    0.0562921, 0.23783, 0.832283), cameraTarget=(0.0562921, 0.23783, 0))
+cliCommand("""move_delamination_onBeam1(model_name, i, part_size)""")
+
+---------- RUNTIME EXCEPTION HAS OCCURRED ----------
+*** ERROR: ABAQUS/ABQcaeG rank 0 received the ABORT signal
+ FAULT
+
+---------- RUNTIME EXCEPTION HAS OCCURRED ----------
+*** ERROR: ABAQUS/ABQcaeK rank 0 received the ABORT signal

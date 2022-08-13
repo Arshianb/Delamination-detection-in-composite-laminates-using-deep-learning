@@ -1,0 +1,83 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by arshi on Fri Aug 12 20:20:47 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=173.510986328125, 
+    height=114.429679870605)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/main-model.cae')
+#: The model database "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\mesh study on smaller size of parts\main-model.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['mesh-Size-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.640566, 
+    farPlane=0.773647, width=0.450808, height=0.22353, viewOffsetX=0.000835747, 
+    viewOffsetY=0.0090469)
+p = mdb.models['mesh-Size-11'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.644846, 
+    farPlane=0.769367, width=0.376936, height=0.186901, viewOffsetX=-0.0205927, 
+    viewOffsetY=0.0281455)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.641261, 
+    farPlane=0.772952, width=0.398766, height=0.197726, viewOffsetX=-0.0163911, 
+    viewOffsetY=0.0223024)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-4'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-7'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-4'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-3'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['mesh-Size-4'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.657488, 
+    farPlane=0.756725, width=0.300062, height=0.148784, viewOffsetX=-0.0388686, 
+    viewOffsetY=0.0422182)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.683869, 
+    farPlane=0.730344, width=0.140194, height=0.0695145, 
+    viewOffsetX=-0.0692907, viewOffsetY=0.085255)
+p = mdb.models['mesh-Size-6'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.654569, 
+    farPlane=0.759644, width=0.317797, height=0.157578, viewOffsetX=-0.0372215, 
+    viewOffsetY=0.0371344)
+p = mdb.models['mesh-Size-4'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.683961, 
+    farPlane=0.730253, width=0.139642, height=0.0692405, 
+    viewOffsetX=-0.0728719, viewOffsetY=0.0850836)
+p = mdb.models['mesh-Size-5'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)

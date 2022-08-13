@@ -10,10 +10,15 @@ Proj_env/*
 Full wavefield processing by using FCN for delamination/save_model_finals.h5
 Abacus models/modal analysis/3d shell planner/X_a diffrence/job*
 Abacus models/modal analysis/3d shell planner/a diffrence/job*
-Abacus models/Base vibration model/job*
-Abacus models/Base vibration model/ABQcaeK*
+Abacus models/Base vibration model on big scale of part/job*
+Abacus models/Base vibration model on big scale of part/ABQcaeK*
 Abacus models/Mesh study/job*
-Abacus models/Base vibration model/main-model.cae
+Abacus models/Base vibration model on big scale of part/main-model.cae
+Abacus models/mesh study on smaller size of parts/Job*
+Abacus models/be careful/*
+Abacus models/Base Vibration for smaller parts/job*
+Abacus models/Base Vibration for smaller parts/main-model.cae
+Abacus models/mesh study on smaller size of parts/main-model.cae
 # Executables
 *.swf
 *.air

@@ -15,10 +15,10 @@ from visualization import *
 from connectorBehavior import *
 
 
-def Intraction(DelaminationCase = 4, i = 0.1):
+def Intraction(model_1_name = "", DelaminationCase = 4, i = 0.1):
 
-    mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].constraints['Constraint-1'].setValues(
+    mdb.models['{}-{}'.format(model_1_name, DelaminationCase)].constraints['Constraint-1'].setValues(
         positionTolerance=i)
 
-    mdb.models['Delamination-forModalAnalysis-Case-{}'.format(DelaminationCase)].constraints['Constraint-2'].setValues(
+    mdb.models['{}-{}'.format(model_1_name, DelaminationCase)].constraints['Constraint-2'].setValues(
         positionTolerance=i)   

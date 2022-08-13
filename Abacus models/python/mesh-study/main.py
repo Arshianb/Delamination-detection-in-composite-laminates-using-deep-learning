@@ -16,23 +16,25 @@ index = 1
 # for i in np.arange(0.1, 0.001, 1000):
 last_mesh = 0
 
-for i in np.linspace(0.04, 0.005, 10000):
-    
-    current_mesh = round(0.0512/i)
+part_size = 0.0250
+hole_dimeter = 0.002
+model_1_name = "mesh-Size"
+for i in np.linspace(0.05, 0.001, 10000):
+    current_mesh = round(part_size/i)
     if current_mesh!=last_mesh:
         print("i = ", i)
         file = open("text.txt", "a") 
-        copy_the_caseDelamination1_ForModealAnalysis(index)
-        edit_mesh_with_meshNum(index, i)
-        Intraction(index, i)
-        Submit_the_job(index)
+        copy_the_caseDelamination1_ForModealAnalysis(index, model_1_name)
+        edit_mesh_with_meshNum(index, i, model_1_name)
+        Intraction(model_1_name, index, i)
+        Submit_the_job(model_1_name, index)
         # time.sleep(5)
-        while os.path.exists('C:\\Users\\795593\OneDrive\\Desktop\\Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-{}.023'.format(index)) == False:
+        while os.path.exists('C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-{}.023'.format(index)) == False:
             time.sleep(0.1)
-        while os.path.exists('C:\\Users\\795593\OneDrive\\Desktop\\Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Mesh study/Job-{}.023'.format(index)):
+        while os.path.exists('C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-{}.023'.format(index)):
             time.sleep(0.1)
             # print(os.path.exists('C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/modal analysis Project/Job-{}.023'.format(index)))
-        index = index + 1
         file.write("index = {} and i = {} \n".format(index, i)) 
         file.close()
-        last_mesh = round(0.0512/i)
+        last_mesh = round(part_size/i)
+        index = index + 1

@@ -1,0 +1,646 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by 795593 on Fri Aug 12 17:15:10 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=437.0859375, 
+    height=289.0)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/main-model.cae')
+#: The model database "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\main-model.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+#--- Recover file: 'main-model.rec' ---
+# -*- coding: mbcs -*- 
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.jobs['Job-11']
+del mdb.jobs['Job-12']
+del mdb.jobs['Job-13']
+del mdb.jobs['Job-14']
+del mdb.jobs['Job-1']
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-1', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-1', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-2', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-2', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-2'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-3', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-3', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-3'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-4', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-4', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-4'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-5', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-5', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-5'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-6', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-6', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-6'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-7', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-7', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-7'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-8', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-8', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-8'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-9', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-9', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-9'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-10', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-10', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-10'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-11', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-11', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-11'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-12', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-12', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-12'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-13', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-13', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-13'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-14', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-14', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-14'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-15', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-15', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-15'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-16', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-16', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-16'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-17', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-17', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-17'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-18', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-18', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-18'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-19', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-19', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-19'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-20', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-20', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-20'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-21', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-21', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-21'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-22', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-22', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-22'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-23', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-23', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-23'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-24', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-24', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-24'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-25', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-25', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-25'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-26', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-26', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-26'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-27', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-27', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-27'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-28', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-28', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-28'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-29', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-29', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-29'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-30', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-30', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-30'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-31', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-31', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-31'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-32', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-32', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-32'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-33', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-33', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-33'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-34', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-34', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-34'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-35', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-35', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-35'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-36', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-36', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-36'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-37', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-37', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-37'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-38', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-38', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-38'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-39', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-39', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-39'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-40', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-40', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-40'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-41', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-41', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-41'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-42', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-42', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-42'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-43', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-43', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-43'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-44', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-44', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-44'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-45', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-45', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-45'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-46', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-46', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-46'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-47', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-47', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-47'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-48', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-48', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-48'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-49', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-49', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-49'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-50', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-50', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-50'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-51', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-51', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-51'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-52', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-52', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-52'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-53', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-53', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-53'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-54', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-54', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-54'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-55', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-55', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-55'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-56', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-56', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-56'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-57', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-57', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-57'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-58', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-58', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-58'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-59', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-59', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-59'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-60', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-60', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-60'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-61', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-61', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-61'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-62', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-62', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-62'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-63', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-63', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-63'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-64', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-64', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-64'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-65', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-65', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-65'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-66', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-66', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-66'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-67', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-67', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-67'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-68', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-68', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-68'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-69', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-69', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-69'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-70', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-70', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-70'].submit(consistencyChecking=OFF)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Delamination-Case-71', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Job-71', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, numGPUs=1, 
+    numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-71'].submit(consistencyChecking=OFF)
+#--- End of Recover file ------
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+o3 = session.openOdb(
+    name='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-29.odb')
+#: Model: C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/Job-29.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     3
+#: Number of Meshes:             3
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.11626, 
+    farPlane=1.85698, width=0.647053, height=0.320726, viewOffsetX=0.032783, 
+    viewOffsetY=0.00723679)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.save()
+#: The model database has been saved to "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\main-model.cae".

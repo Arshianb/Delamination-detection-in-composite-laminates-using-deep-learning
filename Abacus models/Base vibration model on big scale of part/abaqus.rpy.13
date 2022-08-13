@@ -1,0 +1,162 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by 795593 on Thu Aug 11 16:40:26 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=291.390625, 
+    height=197.092590332031)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/Base vibration model/main-model.cae')
+#: The model database "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\main-model.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+p1 = mdb.models['Delamination-Case-2'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+del mdb.models['Delamination-Case-2']
+del mdb.models['Delamination-Case-3']
+del mdb.models['Delamination-Case-4']
+del mdb.models['Delamination-Case-5']
+del mdb.models['Delamination-Case-6']
+del mdb.models['Delamination-Case-7']
+del mdb.models['Delamination-Case-8']
+del mdb.models['Delamination-Case-9']
+del mdb.models['Delamination-Case-10']
+p = mdb.models['Delamination-Case-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Delamination-Case-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+del mdb.jobs['Job-2']
+del mdb.jobs['Job-3']
+del mdb.jobs['Job-4']
+del mdb.jobs['Job-5']
+del mdb.jobs['Job-6']
+del mdb.jobs['Job-7']
+del mdb.jobs['Job-8']
+del mdb.jobs['Job-9']
+del mdb.jobs['Job-10']
+mdb.save()
+#: The model database has been saved to "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\main-model.cae".
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1""")
+cliCommand("""import os""")
+cliCommand("""for i in range(2, 10):
+    copy_the_caseDelamination1(i)
+    move_delamination_onBeam1(i)
+    moveBeam2(i)
+    EditPartitionBEam1(i)
+    edit_mesh(i)
+    time.sleep(0.5)
+""")
+#: The model "Delamination-Case-2" has been created.
+#: Warning: Mesh deleted in 6 regions due to geometry association failure.
+#: The model "Delamination-Case-3" has been created.
+#: Warning: Mesh deleted in 7 regions due to geometry association failure.
+#: The model "Delamination-Case-4" has been created.
+#: Warning: Mesh deleted in 7 regions due to geometry association failure.
+#: The model "Delamination-Case-5" has been created.
+#: Warning: Mesh deleted in 7 regions due to geometry association failure.
+#: The model "Delamination-Case-6" has been created.
+#: Warning: Mesh deleted in 7 regions due to geometry association failure.
+#: The model "Delamination-Case-7" has been created.
+#: Warning: Mesh deleted in 7 regions due to geometry association failure.
+#: The model "Delamination-Case-8" has been created.
+#: Warning: Mesh deleted in 7 regions due to geometry association failure.
+#: The model "Delamination-Case-9" has been created.
+#: Warning: Mesh deleted in 7 regions due to geometry association failure.
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1""")
+cliCommand("""import os""")
+cliCommand("""for i in range(10, 11):
+    copy_the_caseDelamination1(i)
+    move_delamination_onBeam1(i)
+    moveBeam2(i)
+    EditPartitionBEam1(i)
+    edit_mesh(i)
+    time.sleep(0.5)
+""")
+#: The model "Delamination-Case-10" has been created.
+#: Warning: Mesh deleted in 7 regions due to geometry association failure.
+a = mdb.models['Delamination-Case-2'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+a = mdb.models['Delamination-Case-9'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+a = mdb.models['Delamination-Case-10'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+a = mdb.models['Delamination-Case-11'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+a = mdb.models['Delamination-Case-9'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Delamination-Case-8'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a.regenerate()
+mdb.save()
+#: The model database has been saved to "C:\Users\795593\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\Base vibration model\main-model.cae".
+del mdb.jobs['Job-11']
+del mdb.jobs['Job-12']
+del mdb.jobs['Job-13']
+del mdb.jobs['Job-14']
+del mdb.jobs['Job-1']
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1""")
+cliCommand("""import os""")
+cliCommand("""for i in range(1, 101):
+    # copy_the_caseDelamination1(i)
+    # move_delamination_onBeam1(i)
+    # moveBeam2(i)
+    # EditPartitionBEam1(i)
+    # edit_mesh(i)
+    # time.sleep(0.5)
+    Submit_the_job(i)
+    while os.path.exists('C:\\\\Users\\\\795593\\\\OneDrive\\\\Desktop\\\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\\\Base vibration model/Job-{}.023'.format(i)) == False:
+        time.sleep(0.1)
+    while os.path.exists('C:\\\\Users\\\\795593\\\\OneDrive\\\\Desktop\\\\Delamination-detection-in-composite-laminates-using-deep-learning\\Abacus models\\\\Base vibration model/Job-{}.023'.format(i)):
+        time.sleep(0.1)
+""")
+#* IOError: (4, 'Interrupted function call')
+
+---------- RUNTIME EXCEPTION HAS OCCURRED ----------
+*** ERROR: ABAQUS/ABQcaeK rank 0 received the ABORT signal

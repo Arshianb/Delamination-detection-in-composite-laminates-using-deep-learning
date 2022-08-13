@@ -1,0 +1,157 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-22.27.30 176069
+# Run by arshi on Fri Aug 12 19:02:12 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=173.510986328125, 
+    height=114.429679870605)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/main-model.cae')
+#: The model database "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\mesh study on smaller size of parts\main-model.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['mesh-Size-1'].parts['Beam1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['mesh-Size-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON, optimizationTasks=OFF, 
+    geometricRestrictions=OFF, stopConditions=OFF)
+cliCommand("""from math import floor""")
+cliCommand("""import time""")
+cliCommand("""from initial import initial""")
+cliCommand("""initial()""")
+cliCommand("""from delamination_hole_onBeam1 import move_delamination_onBeam1""")
+cliCommand("""from move_Beam1andBeam2 import moveBeam2""")
+cliCommand("""from edit_partitionOfBeam1 import EditPartitionBEam1""")
+cliCommand("""from edit_mesh import edit_mesh, edit_mesh_with_meshNum""")
+cliCommand("""from submit_TheJob import Submit_the_job""")
+cliCommand("""from copy_the_case_delamination1 import copy_the_caseDelamination1, copy_the_caseDelamination1_ForModealAnalysis""")
+cliCommand("""import numpy as np""")
+cliCommand("""from intraction import Intraction""")
+cliCommand("""import os""")
+cliCommand("""# i = 91""")
+cliCommand("""index = 1""")
+cliCommand("""# for i in np.arange(0.1, 0.001, 1000):""")
+cliCommand("""last_mesh = 0""")
+cliCommand("""part_size = 0.0250""")
+cliCommand("""hole_dimeter = 0.002""")
+cliCommand("""model_1_name = "mesh-Size\"""")
+cliCommand("""for i in np.linspace(0.05, 0.001, 10000):
+    current_mesh = round(part_size/i)
+    if current_mesh!=last_mesh:
+        print("i = ", i)
+        file = open("text.txt", "a") 
+        copy_the_caseDelamination1_ForModealAnalysis(index, model_1_name)
+        edit_mesh_with_meshNum(index, i, model_1_name)
+        Intraction(model_1_name, index, i)
+        Submit_the_job(model_1_name, index)
+        # time.sleep(5)
+        while os.path.exists('C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-{}.023'.format(index)) == False:
+            time.sleep(0.1)
+        while os.path.exists('C:/Users/arshi/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/mesh study on smaller size of parts/Job-{}.023'.format(index)):
+            time.sleep(0.1)
+            # print(os.path.exists('C:/Users/795593/OneDrive/Desktop/Delamination-detection-in-composite-laminates-using-deep-learning/Abacus models/modal analysis Project/Job-{}.023'.format(index)))
+        index = index + 1
+        file.write("index = {} and i = {} \\n".format(index, i)) 
+        file.close()
+        last_mesh = round(part_size/i)
+""")
+#: ('i = ', 0.05)
+#: The model "mesh-Size-1" has been created.
+#: ('i = ', 0.016661966196619665)
+#: The model "mesh-Size-2" has been created.
+#: ('i = ', 0.009997299729973)
+#: The model "mesh-Size-3" has been created.
+#: ('i = ', 0.007140314031403139)
+#: The model "mesh-Size-4" has been created.
+#: ('i = ', 0.005552555255525553)
+#: The model "mesh-Size-5" has been created.
+#: ('i = ', 0.004543054305430547)
+#: The model "mesh-Size-6" has been created.
+#: ('i = ', 0.0038422842284228445)
+#: The model "mesh-Size-7" has been created.
+#: ('i = ', 0.0033326332633263345)
+#: The model "mesh-Size-8" has been created.
+#: ('i = ', 0.002940594059405943)
+#: The model "mesh-Size-9" has been created.
+#: ('i = ', 0.002626962696269629)
+#: The model "mesh-Size-10" has been created.
+#: ('i = ', 0.0023770377037703808)
+#: The model "mesh-Size-11" has been created.
+#: ('i = ', 0.002171217121712171)
+#: The model "mesh-Size-12" has been created.
+#: ('i = ', 0.001999699969997)
+#: The model "mesh-Size-13" has been created.
+#: ('i = ', 0.0018477847784778498)
+#: The model "mesh-Size-14" has been created.
+#: ('i = ', 0.001720372037203724)
+#: The model "mesh-Size-15" has been created.
+#: ('i = ', 0.0016125612561256122)
+#: The model "mesh-Size-16" has been created.
+#: ('i = ', 0.0015145514551455144)
+#: The model "mesh-Size-17" has been created.
+#: ('i = ', 0.0014263426342634306)
+#: The model "mesh-Size-18" has been created.
+#: ('i = ', 0.0013479347934793467)
+#: The model "mesh-Size-19" has been created.
+#: ('i = ', 0.0012793279327932838)
+#: The model "mesh-Size-20" has been created.
+#: ('i = ', 0.0012156215621562175)
+#: The model "mesh-Size-21" has been created.
+#: ('i = ', 0.001161716171617165)
+#: The model "mesh-Size-22" has been created.
+#: ('i = ', 0.0011078107810781057)
+#: The model "mesh-Size-23" has been created.
+#: ('i = ', 0.0010637063706370672)
+#: The model "mesh-Size-24" has been created.
+#: ('i = ', 0.0010196019601960218)
+#: The model "mesh-Size-25" has been created.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+#: Job Job-1: Abaqus/Standard completed successfully.
+#: Job Job-1 completed successfully. 
+#: Job Job-2: Analysis Input File Processor completed successfully.
+#: Job Job-2: Abaqus/Standard completed successfully.
+#: Job Job-2 completed successfully. 
+#: Job Job-3: Analysis Input File Processor completed successfully.
+#: Error in job Job-25: XML parsing failure for job Job-25.  Shutting down socket and terminating all further messages.  Please check the .log, .dat, .sta, or .msg files for information about the status of the job.
+#: Job Job-25 aborted due to errors.
+a = mdb.models['mesh-Size-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+a = mdb.models['mesh-Size-2'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['mesh-Size-3'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['mesh-Size-7'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.521402, 
+    farPlane=0.930514, width=0.363873, height=0.180424, viewOffsetX=-0.0116909, 
+    viewOffsetY=0.0162873)
+a = mdb.models['mesh-Size-21'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.532604, 
+    farPlane=0.919313, width=0.331118, height=0.164183, viewOffsetX=0.0229289, 
+    viewOffsetY=0.0027054)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+mdb.save()
+#: The model database has been saved to "C:\Users\arshi\OneDrive\Desktop\Delamination-detection-in-composite-laminates-using-deep-learning\Abacus models\mesh study on smaller size of parts\main-model.cae".
